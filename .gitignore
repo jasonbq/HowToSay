@@ -1,0 +1,14 @@
+gen/
+bin/
+libs/
+src/ru/o2genum/howtosay/Secret.java
+.project
+.classpath
+*.class
+*.dex
+*.apk
+*.ap_
+*.swp
+build.xml
+local.properties
+proguard.cfg

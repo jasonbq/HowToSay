@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- For translators: you should translate phrases enclosed in <string> tags.
+     Please, read about string in Android:
+     http://developer.android.com/guide/topics/resources/string-resource.html
+     Don't forget to specify the language.-->
+<resources>
+    <string name="app_name">How to Say</string>
+    <string name="error_exception">Error! Check internet connection, obtain personal API key and ensure that it is valid and not expired.</string>
+    <string name="set_api_key_toast">Click \"API key\" to set your API key!</string>
+    <string name="api_key_explanation">Forvo allows third-party apps (and this app, in particular) to access its resources. But only 1000 requests per day are permitted for all users of each app. Therefore, this application may not work sometimes because other users may exceed the limits. So I recommend you to <b>register your own free API key at http://api.forvo.com and enter it below</b>. Good luck: the key is damn long!</string>
+    <!-- Pronunciation search activity -->
+    <string name="pronunciations_of">Pronunciations of \"%s\"</string>
+    <string name="male">male</string>
+    <string name="female">female</string>
+    <!-- Dashboard icons -->
+    <string name="words">Words</string>
+    <string name="pronunciations">Pronunciations</string>
+    <string name="forvo_com">Forvo.com</string>
+    <string name="about">About</string>
+    <string name="dashboard_api_key">API key</string>
+    <!-- Word search activity -->
+    <string name="searching_for">Searching for \"%s\"</string>
+    <plurals name="pronunciation_s">
+        <item quantity="one">1 pronunciation</item>
+        <item quantity="other">%d pronunciations</item>
+    </plurals>
+    <string name="search_for_pronunciations">Search for pronunciations</string>
+    <!-- Set API key activity -->
+    <string name="set_button">Set</string>
+    <string name="key_is_set">API key is set</string>
+    <string name="key_is_not_set">API key is not set</string>
+    <string name="key_seems_wrong">API key seems wrong</string>
+</resources>
