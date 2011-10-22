@@ -125,8 +125,13 @@ public abstract class BaseActivity extends Activity {
     }
 
     public String getLocalizedString(String inEnglish) {
-        int id = getResources().getIdentifier(inEnglish.toLowerCase(),
-                "string", getClass().getPackage().getName());
+        int id = getResources().getIdentifier(
+                inEnglish.toLowerCase()
+                .replace(" ", "_")
+                .replace(")", "")
+                .replace("(", "")
+                .replace("-", "_")
+                .replace("\'", "_"), "string", getClass().getPackage().getName());
         return id != 0 ? getString(id) : inEnglish;
     }
 

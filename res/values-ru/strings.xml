@@ -2,125 +2,115 @@
 <!-- For translators: you should translate phrases enclosed in <string> tags.
      Please, read about strings in Android:
      http://developer.android.com/guide/topics/resources/string-resource.html
-     Don't forget to specify the language below.
-     Translating comments is not necessary. -->
-<!-- Language: English -->
+     Don't forget to specify the language.-->
+<!-- Language: Russian -->
 <resources>
     <string name="app_name">How to Say</string>
-    <string name="error_exception">Error! Check internet connection, obtain personal API key and ensure that it is valid and not expired.</string>
-    <string name="set_api_key_toast">Click \"API key\" to set your API key!</string>
-    <string name="api_key_explanation">Forvo allows third-party apps (and this app, in particular) to access its resources. But only 1000 requests per day are permitted for all users of each app. Therefore, this application may not work sometimes because other users may exceed the limits. So I recommend you to <b>register your own free API key at http://api.forvo.com and enter it below</b>. Good luck: the key is damn long!</string>
+    <string name="error_exception">Ошибка! Проверьте доступность forvo.com, наличие, верность и действительность вашего API-ключа.</string>
+    <string name="set_api_key_toast">Нажмите \"API-ключ\", чтобы установить свой ключ.</string>
+    <string name="api_key_explanation">Forvo позволяет сторонним приложениям использовать его ресурсы, но, конечно же, есть ограничения. Каждый разработчик получает один API-ключ - этот ключ даёт возможность делать 1000 обращений к серверам Forvo в сутки. Это приложение по умолчанию использует мой API-ключ. Таким образом, вы и все пользователи этой программы ограничены 1000 запросами в день. Поэтому я советую вам <b>зарегистрировать свой API-ключ</b> на http://api.forvo.com/ и ввести его здесь, чтобы избежать неожиданных сбоев программы из-за превышения ограничений.</string>
     <!-- Pronunciation search activity -->
-    <string name="pronunciations_of">Pronunciations of \"%s\"</string>
-    <string name="male">male</string>
-    <string name="female">female</string>
+    <string name="pronunciations_of">Произношения \"%s\"</string>
+    <string name="male">муж.</string>
+    <string name="female">жен.</string>
     <!-- Dashboard icons -->
-    <string name="words">Words</string>
-    <string name="pronunciations">Pronunciations</string>
+    <string name="words">Слова</string>
+    <string name="pronunciations">Произношения</string>
     <string name="forvo_com">Forvo.com</string>
-    <string name="about">About</string>
-    <string name="dashboard_api_key">API key</string>
+    <string name="about">О программе</string>
+    <string name="dashboard_api_key">API-ключ</string>
     <!-- Word search activity -->
-    <string name="searching_for">Searching for \"%s\"</string>
-    <!-- Looks like that cool plurals localization mechanism is broken. I worked with Russian and plurals behaved very strangely. I recommend you only to set "one" and "other" values. Try something like "pronunciations: %d" (try to create a phrase that suitable for every number). Example two: in Russian I used abbreviation: "%d произн." - the ending of the word changes depending on value of %d, but I just cut it out. -->
+    <string name="searching_for">Поиск \"%s\"</string>
+    <!-- As I see, android plurals are broken. Don't work right. -->
     <plurals name="pronunciation_s">
-        <item quantity="one">1 pronunciation</item>
-        <item quantity="other">%d pronunciations</item>
+        <item quantity="zero">нет произношений</item>
+        <item quantity="one">1 произношение</item>
+        <item quantity="other">%d произн.</item>
     </plurals>
-    <string name="search_for_pronunciations">Search for pronunciations</string>
+    <string name="search_for_pronunciations">Найти произношения</string>
     <!-- Set API key activity -->
-    <string name="set_button">Set</string>
-    <string name="key_is_set">API key is set</string>
-    <string name="key_is_not_set">API key is not set</string>
-    <string name="key_seems_wrong">API key seems wrong</string>
-    <!-- Congratulations! The app also needs translations of names of countries and languages! Untranslated languages and countries will be present in English in the app.
-         Useful links:
-         http://www.listofcountriesoftheworld.com/
-         http://www.forvo.com/languages/alphabetically/ -->
+    <string name="set_button">Установить</string>
+    <string name="key_is_set">API-ключ установлен</string>
+    <string name="key_is_not_set">API-ключ не установлен</string>
+    <string name="key_seems_wrong">Возможно, API-ключ неверен</string>
     <!-- Countries -->
-    <!-- Example:
-         <string name="russia">Россия</string>
-         <string name="united_states">Соединённые Штаты</string>
-         As you see, name attributes are just names of countries in lower case with "_" instead of spaces, hyphens and apostrophes and without brackets. -->
-    <!-- Uncomment following lines with names of countries and provide translations. If you don't want to translate something, comment the line. There should be no empty strings! -->
-    <!--
     <string name="afghanistan">Афганистан</string>
     <string name="akrotiri">Акротири</string>
     <string name="albania">Албания</string>
-    <string name="algeria"></string>
+    <string name="algeria">Алжир</string>
     <string name="american_samoa"></string>
-    <string name="andorra"></string>
+    <string name="andorra">Андорра</string>
     <string name="anguilla"></string>
-    <string name="antarctica"></string>
+    <string name="antarctica">Антарктика</string>
     <string name="antigua_and_barbuda"></string>
     <string name="antigua"></string>
     <string name="barbuda"></string>
-    <string name="argentina"></string>
-    <string name="armenia"></string>
+    <string name="argentina">Аргентина</string>
+    <string name="armenia">Армения</string>
     <string name="aruba"></string>
     <string name="ashmore_and_cartier_islands"></string>
     <string name="ashmore_and_cartier"></string>
     <string name="ashmore"></string>
     <string name="cartier"></string>
-    <string name="australia"></string>
-    <string name="austria"></string>
-    <string name="azerbaijan"></string>
-    <string name="the_bahamas"></string>
-    <string name="bahamas"></string>
-    <string name="bahrain"></string>
-    <string name="bangladesh"></string>
+    <string name="australia">Австралия</string>
+    <string name="austria">Австрия</string>
+    <string name="azerbaijan">Азербайджан</string>
+    <string name="the_bahamas">Багамы</string>
+    <string name="bahamas">Багамы</string>
+    <string name="bahrain">Бахрейн</string>
+    <string name="bangladesh">Бангладеш</string>
     <string name="barbados"></string>
     <string name="bassas_da_india"></string>
     <string name="bassas"></string>
-    <string name="belarus"></string>
-    <string name="belgium"></string>
+    <string name="belarus">Белоруссия</string>
+    <string name="belgium">Бельгия</string>
     <string name="belize"></string>
     <string name="benin"></string>
-    <string name="bermuda"></string>
-    <string name="bhutan"></string>
-    <string name="bolivia"></string>
-    <string name="bosnia_and_herzegovina"></string>
-    <string name="bosnia"></string>
-    <string name="herzegovina"></string>
-    <string name="botswana"></string>
+    <string name="bermuda">Бермуды</string>
+    <string name="bhutan">Бутан</string>
+    <string name="bolivia">Боливия</string>
+    <string name="bosnia_and_herzegovina">Босния и Герцеговина</string>
+    <string name="bosnia">Босния</string>
+    <string name="herzegovina">Герцеговина</string>
+    <string name="botswana">Ботсвана</string>
     <string name="bouvet_island"></string>
     <string name="bouvet"></string>
-    <string name="brazil"></string>
+    <string name="brazil">Бразилия</string>
     <string name="british_indian_ocean_territory"></string>
     <string name="british_virgin_islands"></string>
     <string name="virgin_islands"></string>
-    <string name="brunei"></string>
-    <string name="bulgaria"></string>
+    <string name="brunei">Бруней</string>
+    <string name="bulgaria">Болгария</string>
     <string name="burkina_faso"></string>
-    <string name="burma"></string>
+    <string name="burma">Бирма</string>
     <string name="burundi"></string>
     <string name="cambodia"></string>
-    <string name="cameroon"></string>
-    <string name="canada"></string>
+    <string name="cameroon">Камерун</string>
+    <string name="canada">Канада</string>
     <string name="cape_verde"></string>
     <string name="cayman_islands"></string>
-    <string name="central_african_republic"></string>
-    <string name="car"></string>
-    <string name="chad"></string>
+    <string name="central_african_republic">Центральноафриканская республика</string>
+    <string name="car">ЦАР</string>
+    <string name="chad">Чад</string>
     <string name="chile"></string>
-    <string name="china"></string>
+    <string name="china">Китай</string>
     <string name="christmas_island"></string>
     <string name="clipperton_island"></string>
-    <string name="cocos_islands"></string>
+    <string name="cocos_islands">Кокосовые острова</string>
     <string name="keeling_islands"></string>
-    <string name="colombia"></string>
+    <string name="colombia">Колумбия</string>
     <string name="comoros"></string>
     <string name="democratic_republic_of_the_congo"></string>
     <string name="democratic_republic_of_congo"></string>
-    <string name="congo"></string>
-    <string name="republic_of_congo"></string>
+    <string name="congo">Конго</string>
+    <string name="republic_of_congo">Республика Конго</string>
     <string name="cook_islands"></string>
     <string name="coral_sea_islands"></string>
     <string name="costa_rica"></string>
     <string name="cote_d_ivoire"></string>
     <string name="croatia"></string>
-    <string name="cuba"></string>
-    <string name="cyprus"></string>
+    <string name="cuba">Куба</string>
+    <string name="cyprus">Кипр</string>
     <string name="czech_republic"></string>
     <string name="chezh"></string>
     <string name="denmark"></string>
@@ -355,7 +345,4 @@
     <string name="yemen"></string>
     <string name="zambia"></string>
     <string name="zimbabwe"></string>
-    -->
-    <!-- Stand up and look out the window. -->
-    <!-- Languages -->
 </resources>
