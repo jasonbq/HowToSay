@@ -154,6 +154,11 @@ public class WordSearchActivity extends BaseActivity {
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v,
             ContextMenuInfo menuInfo) {
+        AdapterContextMenuInfo info = (AdapterContextMenuInfo) menuInfo;
+        if(endlessWordAdapter.getItemViewType(info.position) == 
+            Adapter.IGNORE_ITEM_VIEW_TYPE) {
+            return;
+            }
         super.onCreateContextMenu(menu, v, menuInfo);
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.word_context_menu, menu);

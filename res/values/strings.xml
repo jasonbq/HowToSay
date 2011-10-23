@@ -41,12 +41,12 @@
     <!-- Example:
          <string name="russia">Россия</string>
          <string name="united_states">Соединённые Штаты</string>
-         As you see, name attributes are just names of countries in lower case with "_" instead of spaces, hyphens and apostrophes and without brackets. -->
+         As you see, name attributes are just names of countries in lower case with "_" instead of spaces, hyphens and apostrophes and without brackets and commas. -->
     <!-- Uncomment following lines with names of countries and provide translations. If you don't want to translate something, comment the line. There should be no empty strings! -->
     <!--
-    <string name="afghanistan">Афганистан</string>
-    <string name="akrotiri">Акротири</string>
-    <string name="albania">Албания</string>
+    <string name="afghanistan"></string>
+    <string name="akrotiri"></string>
+    <string name="albania"></string>
     <string name="algeria"></string>
     <string name="american_samoa"></string>
     <string name="andorra"></string>
@@ -155,7 +155,7 @@
     <string name="germany"></string>
     <string name="ghana"></string>
     <string name="gibraltar"></string>
-    <string name="blorioso_islands"></string>
+    <string name="glorioso_islands"></string>
     <string name="greece"></string>
     <string name="greenland"></string>
     <string name="grenada"></string>
@@ -334,9 +334,9 @@
     <string name="ukraine"></string>
     <string name="united_arab_emirates"></string>
     <string name="uae"></string>
-    <string name="united_kingrom"></string>
+    <string name="united_kingdom"></string>
     <string name="uk"></string>
-    <string name="unites_states"></string>
+    <string name="united_states"></string>
     <string name="us"></string>
     <string name="usa"></string>
     <string name="uruguay"></string>
@@ -355,6 +355,17 @@
     <string name="yemen"></string>
     <string name="zambia"></string>
     <string name="zimbabwe"></string>
+    <string name="congo_democratic_republic_of_the"><string>
+    <string name="congo_democratic_republic_of"><string>
+    <string name="congo_republic_of"><string>
+    <string name="gambia_the"><string>
+    <string name="korea_north"><string>
+    <string name="korea_south"><string>
+    <string name="korea_republic_of"><string>
+    <string name="micronesia_federated_states_of"><string>
+    <string name="micronesia_states_of"><string>
+    <string name="bahamas_the"><string>
+    <string name="svalbard_and_jan_mayen"></string>
     -->
     <!-- Stand up and look out the window. -->
     <!-- Languages -->
