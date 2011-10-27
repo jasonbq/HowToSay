@@ -23,8 +23,8 @@ How to get a working copy of the project:
 Now you likely have everything I have in my project directory. Please, read Android Code Style Guidelines (yes, code must be beautiful) and feel free to join the development.
 
 ### Project needs translations
-Every translation will be appreciated. If you're not familar with git, download [strings.xml](res/values/strings.xml), translate it into your language (guidelines are in the file) and send it to me (my e-mail is o2(at)nm.ru). I think it's possible to do even if you're not familar with Android and XML.
+Every translation will be appreciated. If you're not familar with git, download [strings.xml](/o2genum/HowToSay/blob/master/res/values/strings.xml), translate it into your language (guidelines are in the file) and send it to me (my e-mail is o2(at)nm.ru). I think it's possible to do even if you're not familar with Android and XML.
 
 License
 -------
-The code is licensed under the Apache Software License 2.0. See [LICENSE](LICENSE) file or [online version](http://www.apache.org/licenses/LICENSE-2.0.html). Copyright (c) 2011, Andrey Moiseev.
+The code is licensed under the Apache Software License 2.0. See [/o2genum/HowToSay/blob/master/LICENSE](LICENSE) file or [online version](http://www.apache.org/licenses/LICENSE-2.0.html). Copyright (c) 2011, Andrey Moiseev.
