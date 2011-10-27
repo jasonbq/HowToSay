@@ -27,4 +27,4 @@ Every translation will be appreciated. If you're not familar with git, download 
 
 License
 -------
-The code is licensed under the Apache Software License 2.0. See [/o2genum/HowToSay/blob/master/LICENSE](LICENSE) file or [online version](http://www.apache.org/licenses/LICENSE-2.0.html). Copyright (c) 2011, Andrey Moiseev.
+The code is licensed under the Apache Software License 2.0. See [LICENSE](/o2genum/HowToSay/blob/master/LICENSE) file or [online version](http://www.apache.org/licenses/LICENSE-2.0.html). Copyright (c) 2011, Andrey Moiseev.
