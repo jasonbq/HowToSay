@@ -36,7 +36,11 @@
     <!-- Congratulations! The app also needs translations of names of countries and languages! Untranslated languages and countries will be present in English in the app.
          Useful links:
          http://www.listofcountriesoftheworld.com/
-         http://www.forvo.com/languages-codes/ -->
+         http://www.forvo.com/languages-codes/
+         http://<language-code>.forvo.com/languages/<language-code>
+         For example,
+         http://ru.forvo.com/languages/ngh to get Russian name for N|uu
+         language  -->
     <!-- Countries -->
     <!-- Example:
          <string name="russia">Россия</string>
@@ -370,7 +374,9 @@
     <!-- Stand up and look out the window. -->
     <!-- Languages -->
     <!-- Don't know translation? Comment the untranslated line.
-         Don't leave active translations empty! -->
+         Don't leave active translations empty!
+         Due to Java naming rules "x-tp" code is "xtp",
+         and "new" code is "new_".-->
     <!--
     <string name="ab"></string>
     <string name="ady"></string>
@@ -540,7 +546,7 @@
     <string name="nv"></string>
     <string name="ng"></string>
     <string name="nap"></string>
-    <string name="new"></string>
+    <string name="new_"></string>
     <string name="ne"></string>
     <string name="nog"></string>
     <string name="nd"></string>

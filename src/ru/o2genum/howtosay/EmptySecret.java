@@ -23,6 +23,8 @@ package ru.o2genum.howtosay;
  * @author Andrey Moiseev
  */
 
+/*
 public class Secret {
-    // public static final String apiKey = ""; // Uncomment and set apiKey
+    public static final String apiKey = "";
 }
+*/

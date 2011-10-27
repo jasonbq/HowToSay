@@ -145,14 +145,16 @@ public abstract class BaseActivity extends Activity {
     }
 
     public int getStrResId(String inEnglish) {
-        return getResources().getIdentifier(
+        String result = 
                 inEnglish.toLowerCase()
                 .replace(' ', '_')
                 .replace(")", "")
                 .replace("(", "")
                 .replace('-', '_')
-                .replace(",", "")
-                .replace('\'', '_'), "string",
+                .replace(",", "");
+        if(result.equals("new")) // "new" is a language code and Java keyword
+            result += "_";
+        return getResources().getIdentifier(result, "string",
                 getClass().getPackage().getName());
     }
 
