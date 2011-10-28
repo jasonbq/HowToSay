@@ -132,16 +132,26 @@ public abstract class BaseActivity extends Activity {
 
     public String getLocalizedLanguageName(String code, String inEnglish) {
         int id = getStrResId(code);
-        return id != 0 ? getString(id) : inEnglish;
+        android.util.Log.d("LOL", new Integer(id).toString());
+        try {
+            return id > 0 ? getString(id) : inEnglish;
+        } catch (Resources.NotFoundException ex) {
+            // Don't know why, but this exception occurs on
+            // Ice Cream Sandwich emulator.
+        } finally {
+            return inEnglish;
+        }
     }
 
     public String getLocalizedCountryName(String inEnglish) {
-        return getLocalizedString(inEnglish);
-    }
-
-    public String getLocalizedString(String inEnglish) {
         int id = getStrResId(inEnglish);
-        return id != 0 ? getString(id) : inEnglish;
+        try {
+            return id > 0 ? getString(id) : inEnglish;
+        } catch (Resources.NotFoundException ex) {
+            // See getLocalizedLanguageName
+        } finally {
+            return inEnglish;
+        }
     }
 
     public int getStrResId(String inEnglish) {
