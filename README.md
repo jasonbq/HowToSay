@@ -23,7 +23,7 @@ How to get a working copy of the project:
 Now you likely have everything I have in my project directory. Please, read Android Code Style Guidelines (yes, code must be beautiful) and feel free to join the development.
 
 ### Project needs translations
-Every translation will be appreciated. If you're not familar with git, download [strings.xml](/o2genum/HowToSay/blob/master/res/values/strings.xml), translate it into your language (guidelines are in the file) and send it to me (my e-mail is o2(at)nm.ru). I think it's possible to do even if you're not familar with Android and XML.
+Every translation will be appreciated. If you're not familar with git, download [strings.xml](/o2genum/HowToSay/blob/master/res/values/strings.xml), translate it into your language (guidelines are in the file) and send it to me (my e-mail is o2(at)nm.ru). I think it's possible to do even if you're not familar with Android and XML. If you have time, please, add translated Android Market app description into [etc/market_description](/o2genum/HowToSay/blob/master/etc/market_description).
 
 License
 -------
