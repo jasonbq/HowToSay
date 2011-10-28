@@ -79,7 +79,7 @@ public class DashboardActivity extends BaseActivity
             public void performAction() {
                 DashboardActivity.this.startActivity(new Intent(
                         Intent.ACTION_VIEW,
-                        Uri.parse("http://github.com/o2genum/HowToSay")));
+                        Uri.parse("https://github.com/o2genum/HowToSay#readme")));
             }
         });
         adapter.addAction(new Action(R.drawable.ic_key,

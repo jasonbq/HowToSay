@@ -132,7 +132,6 @@ public abstract class BaseActivity extends Activity {
 
     public String getLocalizedLanguageName(String code, String inEnglish) {
         int id = getStrResId(code);
-        android.util.Log.d("LOL", new Integer(id).toString());
         try {
             return id > 0 ? getString(id) : inEnglish;
         } catch (Resources.NotFoundException ex) {

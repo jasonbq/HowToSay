@@ -2,7 +2,7 @@ How to Say: an awesome pronunciation guide
 ===========================================
 For users
 ---------
-This is a pronunciation guide application for Android based on [Forvo](http://forvo.com). The app provides word search and pronunciations for every word.
+This is a pronunciation guide application for Android based on [Forvo](http://forvo.com). The app provides word search and pronunciations for every word. Available in [Android Market](https://market.android.com/details?id=ru.o2genum.howtosay) (search "How to Say" or "pname:ru.o2genum.howtosay").
 
 For developers
 --------------
