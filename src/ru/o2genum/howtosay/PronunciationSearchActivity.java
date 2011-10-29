@@ -24,6 +24,7 @@ import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,46 +48,55 @@ public class PronunciationSearchActivity extends BaseActivity {
 
     private String query;
     private Word word;
+    private EndlessPronunciationAdapter endlessAdapter;
+    private String title;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         Intent intent = getIntent();
-        // Activity was launched with ACTION_SEARCH action?
-        // Let's perform search and do everything we need.
-        if(Intent.ACTION_SEARCH.equals(intent.getAction())) {
-            query = intent.getStringExtra(SearchManager.QUERY);
-            word = new Word(query);
-            setTitle(getString(R.string.pronunciations_of, query));
+        query = intent.getStringExtra(SearchManager.QUERY);
+        word = new Word(query);
+        title = getString(R.string.pronunciations_of, query);
+        PronunciationAdapter pronunciationAdapter =
+            new PronunciationAdapter(this, 0);
+        endlessAdapter = new EndlessPronunciationAdapter(this,
+                    pronunciationAdapter, R.layout.pendingview);
+        initializeUI();
+   }
 
-            PronunciationAdapter pronunciationAdapter =
-                new PronunciationAdapter(this, 0);
-            // List view - our key UI element
-            ListView lv = new ListView(this);
-            lv.setAdapter(new EndlessPronunciationAdapter(this,
-                        pronunciationAdapter, R.layout.pendingview));
-            setView(lv);
+   @Override
+   public void onConfigurationChanged(Configuration newConfig) {
+       super.onConfigurationChanged(newConfig);
+       initializeUI();
+   }
+    
+    public void initializeUI() {
+        setTitle(title);
+        // List view - our key UI element
+        ListView lv = new ListView(this);
+        lv.setAdapter(endlessAdapter);
+        setView(lv);
 
-            lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                public void onItemClick(AdapterView<?> parent, View view,
-                    int position, long id) {
-                    EndlessPronunciationAdapter a =
-                        (EndlessPronunciationAdapter) parent.getAdapter();
-                    if(!(a.getItemViewType(position) == 
-                        Adapter.IGNORE_ITEM_VIEW_TYPE)) {
-                            playSound(
-                                ((Pronunciation) a.getItem(position))
-                                .getAudioURL(Pronunciation.AudioFormat.MP3)
-                                .toString());
-                    } else {
-                        // Pending view was clicked
-                    }
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view,
+                int position, long id) {
+                EndlessPronunciationAdapter a =
+                    (EndlessPronunciationAdapter) parent.getAdapter();
+                if(!(a.getItemViewType(position) == 
+                    Adapter.IGNORE_ITEM_VIEW_TYPE)) {
+                        playSound(
+                            ((Pronunciation) a.getItem(position))
+                            .getAudioURL(Pronunciation.AudioFormat.MP3)
+                            .toString());
+                } else {
+                    // Pending view was clicked
                 }
-            });
-
-        }
+            }
+        });
     }
+ 
 
     class PronunciationAdapter extends ArrayAdapter<Pronunciation> {
 

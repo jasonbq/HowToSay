@@ -24,6 +24,7 @@ import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -53,6 +54,8 @@ public class WordSearchActivity extends BaseActivity {
 
     private String query;
     private Word word;
+    private String title;
+    private WordAdapter wordAdapter;
     private EndlessWordAdapter endlessWordAdapter;
 
     @Override
@@ -60,42 +63,48 @@ public class WordSearchActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         Intent intent = getIntent();
-        // Activity was launched with ACTION_SEARCH action?
-        // Let's perform search and do everything we need.
-        if(Intent.ACTION_SEARCH.equals(intent.getAction())) {
-            query = intent.getStringExtra(SearchManager.QUERY);
-            word = new Word(query);
-            setTitle(getString(R.string.searching_for, query));
+        query = intent.getStringExtra(SearchManager.QUERY);
+        word = new Word(query);
+        title = getString(R.string.searching_for, query);
+        wordAdapter = new WordAdapter(this, 0);
+        // List view - our key UI element
+        endlessWordAdapter =
+            new EndlessWordAdapter(this, wordAdapter, R.layout.pendingview);
+        initializeUI();
+    }
 
-            WordAdapter wordAdapter = new WordAdapter(this, 0);
-            // List view - our key UI element
-            ListView lv = new ListView(this);
-            endlessWordAdapter = new EndlessWordAdapter(this, wordAdapter,
-                        R.layout.pendingview);
-            lv.setAdapter(endlessWordAdapter);
-            setView(lv);
-            registerForContextMenu(lv);
+    protected void initializeUI() {
+        ListView lv = new ListView(this);
+        lv.setAdapter(endlessWordAdapter);
+        setTitle(title);
+        setView(lv);
+        registerForContextMenu(lv);
 
-            lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view,
-                    int position, long id) {
-                    EndlessWordAdapter a = (EndlessWordAdapter)
-                        parent.getAdapter();
-                    if(!(a.getItemViewType(position) == 
-                        Adapter.IGNORE_ITEM_VIEW_TYPE)) {
-                            playSound(
-                                ((WordAndPronunciation) a.getItem(position))
-                                .getPronunciation()
-                                .getAudioURL(Pronunciation.AudioFormat.MP3)
-                                .toString());
-                    } else {
-                        // Pending view was clicked
-                    }
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                int position, long id) {
+                EndlessWordAdapter a = (EndlessWordAdapter)
+                    parent.getAdapter();
+                if(!(a.getItemViewType(position) == 
+                    Adapter.IGNORE_ITEM_VIEW_TYPE)) {
+                        playSound(
+                            ((WordAndPronunciation) a.getItem(position))
+                            .getPronunciation()
+                            .getAudioURL(Pronunciation.AudioFormat.MP3)
+                            .toString());
+                } else {
+                    // Pending view was clicked
                 }
-            });
+            }
+        });
+    }
 
-        }
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        initializeBasicUI();
+        initializeUI();
     }
 
     class WordAdapter extends ArrayAdapter<WordAndPronunciation> {

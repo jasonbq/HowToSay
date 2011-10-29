@@ -60,6 +60,14 @@ public abstract class BaseActivity extends Activity {
         prefs = getSharedPreferences(SHARED_PREFS_KEY, Context.MODE_PRIVATE);
         searchManager = (SearchManager) 
             getSystemService(Context.SEARCH_SERVICE);
+        this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
+        mediaPlayer = new MediaPlayer();
+        // Set API key
+        ApiKey.setKey(getApiKey());
+        initializeBasicUI();
+    }
+
+    protected void initializeBasicUI() {
         inflater = (LayoutInflater) getSystemService
                   (Context.LAYOUT_INFLATER_SERVICE);
         setContentView(R.layout.base);
@@ -75,14 +83,12 @@ public abstract class BaseActivity extends Activity {
                 doSearch(null);
             }
         });
-        this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
-        mediaPlayer = new MediaPlayer();
-        // Set API key
-        ApiKey.setKey(getApiKey());
     }
+
 
     public void setView(View view) {
         FrameLayout frame = (FrameLayout) findViewById(R.id.frame);
+        frame.removeAllViews();
         frame.addView(view);
     }
 
@@ -132,24 +138,26 @@ public abstract class BaseActivity extends Activity {
 
     public String getLocalizedLanguageName(String code, String inEnglish) {
         int id = getStrResId(code);
+        String result = inEnglish;
         try {
-            return id > 0 ? getString(id) : inEnglish;
+            result = id != 0 ? getString(id) : inEnglish;
         } catch (Resources.NotFoundException ex) {
             // Don't know why, but this exception occurs on
             // Ice Cream Sandwich emulator.
         } finally {
-            return inEnglish;
+            return result;
         }
     }
 
     public String getLocalizedCountryName(String inEnglish) {
         int id = getStrResId(inEnglish);
+        String result = inEnglish;
         try {
-            return id > 0 ? getString(id) : inEnglish;
+          result = id != 0 ? getString(id) : inEnglish;
         } catch (Resources.NotFoundException ex) {
             // See getLocalizedLanguageName
         } finally {
-            return inEnglish;
+            return result;
         }
     }
 

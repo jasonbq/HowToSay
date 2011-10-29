@@ -27,12 +27,22 @@ import android.widget.ImageView;
 import android.util.AttributeSet;
 
 public class PendingView extends ImageView {
+    Context context;
 
     public PendingView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        this.context = context;
+        initializeUI();
+    }
+
+    public void initializeUI() {
         setImageResource(R.drawable.preloader);
         Animation animation = AnimationUtils.loadAnimation(context,
                 R.anim.rotation);
         startAnimation(animation);
+    }
+
+    public void onSizeChanged(int w, int h, int oldw, int oldh) {
+        initializeUI();
     }
 }

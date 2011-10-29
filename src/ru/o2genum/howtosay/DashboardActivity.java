@@ -24,6 +24,7 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -49,6 +50,20 @@ public class DashboardActivity extends BaseActivity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        initializeUI();
+        if(!isApiKeySet()) {
+            Toast.makeText(this, getString(R.string.set_api_key_toast),
+                    Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfiguration) {
+        super.onConfigurationChanged(newConfiguration);
+        initializeUI();
+    }
+
+    public void initializeUI() {
         gridView = (GridView) inflater.inflate(R.layout.grid, null);
         final DashboardAdapter adapter = new DashboardAdapter(this);
         adapter.addAction(new Action(R.drawable.ic_words,
@@ -79,7 +94,8 @@ public class DashboardActivity extends BaseActivity
             public void performAction() {
                 DashboardActivity.this.startActivity(new Intent(
                         Intent.ACTION_VIEW,
-                        Uri.parse("https://github.com/o2genum/HowToSay#readme")));
+                        Uri.parse("https://github.com/o2genum/HowToSay" +
+                                "#readme")));
             }
         });
         adapter.addAction(new Action(R.drawable.ic_key,
@@ -98,10 +114,6 @@ public class DashboardActivity extends BaseActivity
             }
         });
         setView(gridView);
-        if(!isApiKeySet()) {
-            Toast.makeText(this, getString(R.string.set_api_key_toast),
-                    Toast.LENGTH_LONG).show();
-        }
     }
 
     @Override
