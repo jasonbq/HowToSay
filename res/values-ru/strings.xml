@@ -17,7 +17,7 @@
     <string name="words">Слова</string>
     <string name="pronunciations">Произношения</string>
     <string name="forvo_com">Forvo.com</string>
-    <string name="about">О программе</string>
+    <string name="about_rate">О программе / оценить</string>
     <string name="dashboard_api_key">API-ключ</string>
     <!-- Word search activity -->
     <string name="searching_for">Поиск \"%s\"</string>

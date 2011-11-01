@@ -89,13 +89,12 @@ public class DashboardActivity extends BaseActivity
             }
         });
         adapter.addAction(new Action(R.drawable.ic_about,
-                    getString(R.string.about)) {
+                    getString(R.string.about_rate)) {
             @Override
             public void performAction() {
                 DashboardActivity.this.startActivity(new Intent(
                         Intent.ACTION_VIEW,
-                        Uri.parse("https://github.com/o2genum/HowToSay" +
-                                "#readme")));
+                        Uri.parse("market://details?id=ru.o2genum.howtosay")));
             }
         });
         adapter.addAction(new Action(R.drawable.ic_key,

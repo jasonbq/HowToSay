@@ -18,7 +18,7 @@
     <string name="words">Words</string>
     <string name="pronunciations">Pronunciations</string>
     <string name="forvo_com">Forvo.com</string>
-    <string name="about">About</string>
+    <string name="about_rate">About / rate app</string>
     <string name="dashboard_api_key">API key</string>
     <!-- Word search activity -->
     <string name="searching_for">Searching for \"%s\"</string>
