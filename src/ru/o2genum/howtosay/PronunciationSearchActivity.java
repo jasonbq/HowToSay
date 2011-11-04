@@ -28,6 +28,8 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.text.Html;
+import android.text.Spanned;
 import android.widget.Adapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -56,7 +58,12 @@ public class PronunciationSearchActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         Intent intent = getIntent();
-        query = intent.getStringExtra(SearchManager.QUERY);
+        if(intent.getAction().equals(Intent.ACTION_SEARCH)) {
+            query = intent.getStringExtra(SearchManager.QUERY);
+        } else if(intent.getAction().equals(Intent.ACTION_SEND)) {
+            query = Html.fromHtml(intent.getStringExtra(Intent.EXTRA_TEXT))
+                .toString();
+        }
         word = new Word(query);
         title = getString(R.string.pronunciations_of, query);
         PronunciationAdapter pronunciationAdapter =

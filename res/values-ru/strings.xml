@@ -33,6 +33,8 @@
     <string name="key_is_set">API-ключ установлен</string>
     <string name="key_is_not_set">API-ключ не установлен</string>
     <string name="key_seems_wrong">Возможно, API-ключ неверен</string>
+    <!-- Others -->
+    <string name="how_to_say_intent">Как произносится?</string>
     <!-- Countries -->
     <string name="afghanistan">Афганистан</string>
     <string name="akrotiri">Акротири</string>

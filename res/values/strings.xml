@@ -33,6 +33,8 @@
     <string name="key_is_set">API key is set</string>
     <string name="key_is_not_set">API key is not set</string>
     <string name="key_seems_wrong">API key seems wrong</string>
+    <!-- Others -->
+    <string name="how_to_say_intent">How to say?</string>
     <!-- Congratulations! The app also needs translations of names of countries and languages! Untranslated languages and countries will be present in English in the app.
          Useful links:
          http://www.listofcountriesoftheworld.com/

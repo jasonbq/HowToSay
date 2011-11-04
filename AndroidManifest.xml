@@ -20,6 +20,12 @@
         <activity android:name=".PronunciationSearchActivity"
             android:configChanges="keyboardHidden|orientation"
             android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter android:icon="@drawable/ic_launcher"
+                android:label="@string/how_to_say_intent">
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/*"/>
+            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH"/>
             </intent-filter>
