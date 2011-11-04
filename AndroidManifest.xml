@@ -39,7 +39,7 @@
                 <action android:name="android.intent.action.SEARCH"/>
             </intent-filter>
             <meta-data android:name="android.app.searchable"
-                android:resource="@xml/searchable"/>
+                android:resource="@xml/searchable_global"/>
         </activity>
         <activity android:name=".SetApiKeyActivity"
             android:theme="@android:style/Theme.NoTitleBar"

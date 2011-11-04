@@ -35,6 +35,8 @@
     <string name="key_seems_wrong">API key seems wrong</string>
     <!-- Others -->
     <string name="how_to_say_intent">How to say?</string>
+    <string name="search_hint">Enter the word</string>
+    <string name="settings_description">Search for words and their pronunciations</string>
     <!-- Congratulations! The app also needs translations of names of countries and languages! Untranslated languages and countries will be present in English in the app.
          Useful links:
          http://www.listofcountriesoftheworld.com/
