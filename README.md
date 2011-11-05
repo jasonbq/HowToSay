@@ -32,6 +32,7 @@ Special thanks to:
  * [commonsguy/cwac-endless](/commonsguy/cwac-endless) for endless list adapter
  * [Inkscape](http://inkscape.org/) project (everything was drawn using that incredible SVG editor)
  * [Clker.com](http://www.clker.com/clipart-black-and-white-globe.html) for B&W globe SVG that I shamelessly copy-pasted from that site
+ * [Yay.se](http://www.yay.se/resources/android-native-icons) for home and search actionbar icons
 
 Also, this project uses my another project [o2genum/forvo-java-api](/o2genum/forvo-java-api). Open its page to discover its dependencies.
 

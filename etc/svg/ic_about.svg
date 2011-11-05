@@ -14,9 +14,9 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   inkscape:export-filename="/home/o2genum/projects/android/HowToSay/res/drawable/ic_about.png"
-   inkscape:export-xdpi="17.578125"
-   inkscape:export-ydpi="17.578125"
+   inkscape:export-filename="/home/o2genum/projects/android/HowToSay/res/drawable-xhdpi/ic_about.png"
+   inkscape:export-xdpi="35.15625"
+   inkscape:export-ydpi="35.15625"
    sodipodi:docname="ic_about.svg">
   <defs
      id="defs4">
@@ -61,7 +61,7 @@
      pagecolor="#000000"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="1"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.69999999"
      inkscape:cx="65.302668"

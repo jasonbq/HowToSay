@@ -35,7 +35,7 @@
     <string name="key_seems_wrong">Возможно, API-ключ неверен</string>
     <!-- Others -->
     <string name="how_to_say_intent">Как произносится?</string>
-    <string name="search_hint">Введите слово</string>
+    <string name="search_hint">Поиск слов</string>
     <string name="settings_description">Поиск слов и их произношений</string>
     <!-- Countries -->
     <string name="afghanistan">Афганистан</string>
