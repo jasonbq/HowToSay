@@ -15,7 +15,7 @@
     <string name="male">male</string>
     <string name="female">female</string>
     <!-- Dashboard -->
-    <string name="forvo_attribution">База произношений <a href='http://forvo.com'>Forvo.com</a></string>
+    <string name="forvo_attribution">Powered by <a href='http://forvo.com'>Forvo.com</a></string>
     <!-- Dashboard icons -->
     <string name="words">Words</string>
     <string name="pronunciations">Pronunciations</string>
