@@ -27,6 +27,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -36,6 +37,7 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,6 +47,7 @@ import java.util.LinkedList;
 public class DashboardActivity extends BaseActivity
 {
     GridView gridView;
+    RelativeLayout layout;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -64,7 +67,8 @@ public class DashboardActivity extends BaseActivity
     }
 
     public void initializeUI() {
-        gridView = (GridView) inflater.inflate(R.layout.grid, null);
+        layout = (RelativeLayout) inflater.inflate(R.layout.grid, null);
+        gridView = (GridView) layout.findViewById(R.id.grid);
         final DashboardAdapter adapter = new DashboardAdapter(this);
         adapter.addAction(new Action(R.drawable.ic_words,
                     getString(R.string.words)) {
@@ -73,19 +77,13 @@ public class DashboardActivity extends BaseActivity
                 doWordSearch(null);
             }
         });
+        TextView textView = (TextView) layout.findViewById(R.id.text_view);
+        textView.setText(Html.fromHtml(getString(R.string.forvo_attribution)));
         adapter.addAction(new Action(R.drawable.ic_pronunciations,
                     getString(R.string.pronunciations)) {
             @Override
             public void performAction() {
                 doPronunciationSearch(null);
-            }
-        });
-        adapter.addAction(new Action(R.drawable.ic_forvo,
-                    getString(R.string.forvo_com)) {
-            @Override
-            public void performAction() {
-                DashboardActivity.this.startActivity(new Intent(
-                        Intent.ACTION_VIEW, Uri.parse("http://www.forvo.com")));
             }
         });
         adapter.addAction(new Action(R.drawable.ic_about,
@@ -112,7 +110,7 @@ public class DashboardActivity extends BaseActivity
                 adapter.performAction(position);
             }
         });
-        setView(gridView);
+        setView(layout);
     }
 
     @Override

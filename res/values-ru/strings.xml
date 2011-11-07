@@ -13,6 +13,8 @@
     <string name="pronunciations_of">Произношения \"%s\"</string>
     <string name="male">муж.</string>
     <string name="female">жен.</string>
+    <!-- Dashboard -->
+    <string name="forvo_attribution">Powered by <a href='http://forvo.com'>Forvo.com</a></string>
     <!-- Dashboard icons -->
     <string name="words">Слова</string>
     <string name="pronunciations">Произношения</string>
