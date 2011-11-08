@@ -15,7 +15,7 @@
     <string name="female">жен.</string>
     <!-- Dashboard -->
     <string name="restart_app_message">Нажмите кнопку НАЗАД и заново запустите приложение, чтобы увидеть изменения</string>
-    <string name="forvo_attribution">Powered by <a href='http://forvo.com'>Forvo.com</a></string>
+    <string name="forvo_attribution">База произношений <a href='http://forvo.com'>Forvo.com</a></string>
     <!-- Dashboard icons -->
     <string name="words">Слова</string>
     <string name="pronunciations">Произношения</string>
