@@ -15,6 +15,7 @@
     <string name="male">male</string>
     <string name="female">female</string>
     <!-- Dashboard -->
+    <string name="restart_app_message">Please, press BACK and start the app again to see changes</string>
     <string name="forvo_attribution">Powered by <a href='http://forvo.com'>Forvo.com</a></string>
     <!-- Dashboard icons -->
     <string name="words">Words</string>
@@ -22,6 +23,8 @@
     <string name="forvo_com">Forvo.com</string>
     <string name="about_rate">About / rate app</string>
     <string name="dashboard_api_key">API key</string>
+    <!-- Menu -->
+    <string name="change_theme">Change theme</string>
     <!-- Word search activity -->
     <string name="searching_for">Searching for \"%s\"</string>
     <!-- Looks like that cool plurals localization mechanism is broken. I worked with Russian and plurals behaved very strangely. I recommend you only to set "one" and "other" values. Try something like "pronunciations: %d" (try to create a phrase that suitable for every number). Example two: in Russian I used abbreviation: "%d произн." - the ending of the word changes depending on value of %d, but I just cut it out. -->

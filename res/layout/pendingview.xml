@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:o2genum="http://schemas.android.com/apk/res/ru.o2genum.howtosay"
     android:id="@+id/pendingview"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content">
     <ru.o2genum.howtosay.PendingView
+        style="?attr/pendingViewStyle"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"

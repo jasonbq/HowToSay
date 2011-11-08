@@ -37,6 +37,8 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 import android.os.Bundle;
 
+import java.util.Arrays;
+
 import com.markupartist.android.widget.ActionBar;
 import com.markupartist.android.widget.ActionBar.AbstractAction;
 import com.markupartist.android.widget.ActionBar.IntentAction;
@@ -49,15 +51,20 @@ public abstract class BaseActivity extends Activity {
     protected LayoutInflater inflater;
     protected SearchManager searchManager;
     protected MediaPlayer mediaPlayer;
-    SharedPreferences prefs;
+    protected SharedPreferences prefs;
+
+    final String SHARED_PREFS_KEY = "ru.o2genum.howtosay.PREFS";
 
     final String PREFS_API_KEY = "API_KEY";
-    final String SHARED_PREFS_KEY = "ru.o2genum.howtosay.PREFS";
+    final String PREFS_THEME = "THEME";
+
+    final String[] THEMES = {"Blueberry.Dark", "Blueberry.Light"};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         prefs = getSharedPreferences(SHARED_PREFS_KEY, Context.MODE_PRIVATE);
+        loadTheme();
+        super.onCreate(savedInstanceState);
         searchManager = (SearchManager) 
             getSystemService(Context.SEARCH_SERVICE);
         this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
@@ -85,7 +92,6 @@ public abstract class BaseActivity extends Activity {
         });
     }
 
-
     public void setView(View view) {
         FrameLayout frame = (FrameLayout) findViewById(R.id.frame);
         frame.removeAllViews();
@@ -95,6 +101,34 @@ public abstract class BaseActivity extends Activity {
     @Override
     public void setTitle(CharSequence title) {
         actionBar.setTitle(title);
+    }
+
+    public void loadTheme() {
+        int themeId = getResources().getIdentifier(THEMES[getPreferredTheme()],
+                "style", getClass().getPackage().getName());
+        setTheme(themeId);
+    }
+
+
+    public void changeTheme() {
+        if(THEMES.length - 1  == getPreferredTheme()) {
+            setPreferredTheme(0);
+        } else {
+            setPreferredTheme(getPreferredTheme() + 1);
+        }
+        Toast.makeText(this, getString(R.string.restart_app_message),
+                Toast.LENGTH_LONG).show();
+    }
+
+    public int getPreferredTheme() {
+        int preferredThemeIndex = Arrays.asList(THEMES)
+            .indexOf(prefs.getString(PREFS_THEME, "THEME_IS_NOT_SET"));
+        return preferredThemeIndex == -1 ? 0 : preferredThemeIndex;
+    }
+
+    public void setPreferredTheme(int preferredThemeIndex) {
+        prefs.edit().putString(PREFS_THEME,
+                THEMES[preferredThemeIndex]).commit();
     }
 
     public void doSearch(String query) {

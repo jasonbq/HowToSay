@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Themes -->
+    <style name="Blueberry.Dark" parent="android:style/Theme.Black.NoTitleBar">
+        <item name="pendingViewStyle">@style/Blueberry.Dark.PendingView</item>
+    </style>
+    <style name="Blueberry.Light" parent="android:style/Theme.Light.NoTitleBar">
+        <item name="pendingViewStyle">@style/Blueberry.Light.PendingView</item>
+    </style>
+    <!-- Styles -->
+    <style name="Blueberry.Dark.PendingView">
+        <item name="android:src">@drawable/preloader_white</item>
+    </style>
+    <style name="Blueberry.Light.PendingView">
+        <item name="android:src">@drawable/preloader_black</item>
+    </style>
+</resources>

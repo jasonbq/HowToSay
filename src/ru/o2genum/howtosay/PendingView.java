@@ -36,7 +36,7 @@ public class PendingView extends ImageView {
     }
 
     public void initializeUI() {
-        setImageResource(R.drawable.preloader);
+        invalidate();
         Animation animation = AnimationUtils.loadAnimation(context,
                 R.anim.rotation);
         startAnimation(animation);
