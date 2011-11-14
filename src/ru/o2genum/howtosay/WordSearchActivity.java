@@ -92,7 +92,7 @@ public class WordSearchActivity extends BaseActivity {
                             ((WordAndPronunciation) a.getItem(position))
                             .getPronunciation()
                             .getAudioURL(Pronunciation.AudioFormat.MP3)
-                            .toString());
+                            .toString(), view);
                 } else {
                     // Pending view was clicked
                 }
@@ -116,12 +116,12 @@ public class WordSearchActivity extends BaseActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
             if(convertView == null) {
             convertView = (View) inflater.inflate(
-                    android.R.layout.simple_list_item_2, null);
+                    R.layout.list_item, null);
             }
             TextView textView = (TextView) convertView.findViewById(
-                    android.R.id.text1);
+                    R.id.text1);
             TextView textView2 = (TextView) convertView.findViewById(
-                    android.R.id.text2);
+                    R.id.text2);
             textView.setText((CharSequence) getItem(position).getWord().
                     getOriginal());
             int numPronunciations = getItem(position).getWord()

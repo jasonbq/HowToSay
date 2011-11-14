@@ -74,6 +74,12 @@ public abstract class BaseActivity extends Activity {
         initializeBasicUI();
     }
 
+    @Override
+    public void onStop() {
+        mediaPlayer.reset();
+        super.onStop();
+    }
+
     protected void initializeBasicUI() {
         inflater = (LayoutInflater) getSystemService
                   (Context.LAYOUT_INFLATER_SERVICE);
@@ -145,21 +151,44 @@ public abstract class BaseActivity extends Activity {
                     PronunciationSearchActivity.class), null, false);
     }
 
-    public void playSound(String url) {
+    public void playSound(String url, View view) {
         final String finalUrl = url;
-        new Thread(new Runnable() {
+        final PendingView finalView =
+                (PendingView) view.findViewById(R.id.list_item_pending_view);
+        if(finalView.getVisibility() == View.INVISIBLE)
+            finalView.showAnim();
+        (new Thread(new Runnable() {
             public void run() {
                 try {
                     mediaPlayer.reset();
+                    mediaPlayer.setOnBufferingUpdateListener(
+                        new MediaPlayer.OnBufferingUpdateListener() {
+                            public void onBufferingUpdate(MediaPlayer mp,
+                                int percent) {
+                            if(percent == 100) {
+                                
+                    BaseActivity.this.runOnUiThread(new Runnable() {
+                        public void run() {
+                            finalView.hideAnim();
+                        }
+                    });
+                }
+                }
+                });
                     mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
                     mediaPlayer.setDataSource(finalUrl);
                     mediaPlayer.prepare();
                     mediaPlayer.start();
                 } catch(Exception ex) {
                     toastException(ex);
+                    BaseActivity.this.runOnUiThread(new Runnable() {
+                        public void run() {
+                            finalView.hideAnim();
+                        }
+                    });
                 }
             }
-        }).start();
+        })).start();
     }
 
     public void toastException(Exception ex) {

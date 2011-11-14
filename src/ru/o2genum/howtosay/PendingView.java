@@ -23,11 +23,13 @@ package ru.o2genum.howtosay;
 import android.content.Context;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Animation;
+import android.view.View;
 import android.widget.ImageView;
 import android.util.AttributeSet;
 
 public class PendingView extends ImageView {
     Context context;
+    Animation animation;
 
     public PendingView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -35,11 +37,31 @@ public class PendingView extends ImageView {
         initializeUI();
     }
 
+    public PendingView(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+        this.context = context;
+        initializeUI();
+    }
+
     public void initializeUI() {
         invalidate();
-        Animation animation = AnimationUtils.loadAnimation(context,
-                R.anim.rotation);
-        startAnimation(animation);
+        if(getVisibility() == View.VISIBLE) {
+            animation = AnimationUtils.loadAnimation(context,
+                    R.anim.rotation);
+            startAnimation(animation);
+        }
+    }
+
+    public void showAnim() {
+        setVisibility(View.VISIBLE);
+        initializeUI();
+    }
+
+    public void hideAnim() {
+        if(animation != null) {
+            clearAnimation();
+        }
+        setVisibility(View.INVISIBLE);
     }
 
     public void onSizeChanged(int w, int h, int oldw, int oldh) {
