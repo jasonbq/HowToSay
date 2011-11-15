@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- See strings.xml for guidelines -->
     <string-array name="theme_names">
         <item>Blueberry Dark</item>
         <item>Blueberry Light</item>

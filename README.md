@@ -30,7 +30,11 @@ How to get a working copy of the project:
 Now you likely have everything I have in my project directory. Please, read Android Code Style Guidelines (yes, code must be beautiful) and feel free to join the development.
 
 ### Project needs translations
-Every translation will be appreciated. If you're not familar with git, download [strings.xml](/o2genum/HowToSay/blob/master/res/values/strings.xml), translate it into your language (guidelines are in the file) and send it to me (my e-mail is o2(at)nm.ru). I think it's possible to do even if you're not familar with Android and XML. If you have time, please, add translated Android Market app description into [etc/market_description](/o2genum/HowToSay/blob/master/etc/market_description).
+Every translation will be appreciated. If you're not familar with git, download files, translate them into your language (guidelines are included) and send them to me (my e-mail is o2(at)nm.ru). I think it's possible to do even if you're not familar with Android and XML. Following files need to be translated:
+
+ * [arrays.xml](/o2genum/HowToSay/blob/master/res/values/arrays.xml)
+ * [strings.xml](/o2genum/HowToSay/blob/master/res/values/strings.xml)
+ * [etc/market_description](/o2genum/HowToSay/blob/master/etc/market_description)
 
 Special thanks to:
 -----------------
@@ -40,6 +44,7 @@ Special thanks to:
  * [Inkscape](http://inkscape.org/) project (everything was drawn using that incredible SVG editor)
  * [Clker.com](http://www.clker.com/clipart-black-and-white-globe.html) for B&W globe SVG that I shamelessly copy-pasted from that site
  * [Yay.se](http://www.yay.se/resources/android-native-icons) for home and search actionbar icons
+ * Alexander Boblak (Alex3n) for good tips
 
 Also, this project uses my another project [o2genum/forvo-java-api](/o2genum/forvo-java-api). Open its page to discover its dependencies.
 
