@@ -177,29 +177,29 @@ public abstract class BaseActivity extends Activity {
             public void run() {
                 try {
                     mediaPlayer.reset();
+                    BaseActivity.this.runOnUiThread(new Runnable() {
+                        public void run() {
                     mediaPlayer.setOnBufferingUpdateListener(
                         new MediaPlayer.OnBufferingUpdateListener() {
                             public void onBufferingUpdate(MediaPlayer mp,
                                 int percent) {
                             if(percent == 100) {
-                                
-                    BaseActivity.this.runOnUiThread(new Runnable() {
-                        public void run() {
                             finalView.hideAnim();
                         }
+                            }
                     });
                 }
-                }
                 });
-                    mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
                     mediaPlayer.setDataSource(finalUrl);
+                    mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
                     mediaPlayer.prepare();
                     mediaPlayer.start();
                 } catch(Exception ex) {
-                    toastException(ex);
+                    final Exception finalEx = ex;
                     BaseActivity.this.runOnUiThread(new Runnable() {
                         public void run() {
                             finalView.hideAnim();
+                            toastException(finalEx);
                         }
                     });
                 }
