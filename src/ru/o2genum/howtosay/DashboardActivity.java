@@ -129,9 +129,21 @@ public class DashboardActivity extends BaseActivity
             case R.id.change_theme:
                 changeTheme();
                 return true;
+            case R.id.share_app:
+                shareApp();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void shareApp() {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_app_text)
+                + " http://bit.ly/htsay");
+        intent.putExtra(Intent.EXTRA_SUBJECT, R.string.share_app_subject);
+        startActivity(intent);
     }
 
     @Override

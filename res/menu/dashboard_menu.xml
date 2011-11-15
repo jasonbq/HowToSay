@@ -3,4 +3,7 @@
     <item android:id="@+id/change_theme"
         android:icon="@android:drawable/ic_menu_view"
         android:title="@string/change_theme"/>
+    <item android:id="@+id/share_app"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="@string/share_the_app"/>
 </menu>

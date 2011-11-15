@@ -15,6 +15,8 @@
     <string name="female">жен.</string>
     <!-- Dashboard -->
     <string name="select_theme_title">Выберите тему</string>
+    <string name="share_app_text">Отличный справочник произношений! How to Say на Андроид Маркет</string>
+    <string name="share_app_subject">How to Say на Андроид Маркет</string>
     <string name="restart_app_message">Перезапустите приложение, чтобы применить новую тему</string>
     <string name="forvo_attribution">База произношений <a href='http://forvo.com'>Forvo.com</a></string>
     <!-- Dashboard icons -->
@@ -25,6 +27,7 @@
     <string name="dashboard_api_key">API-ключ</string>
     <!-- Menu -->
     <string name="change_theme">Сменить тему</string>
+    <string name="share_the_app">Поделиться</string>
     <!-- Word search activity -->
     <string name="searching_for">Поиск \"%s\"</string>
     <!-- As I see, android plurals are broken. Don't work right. -->
