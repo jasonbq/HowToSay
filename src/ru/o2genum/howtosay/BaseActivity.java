@@ -21,9 +21,11 @@ package ru.o2genum.howtosay;
  */
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.ComponentName;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
@@ -59,6 +61,7 @@ public abstract class BaseActivity extends Activity {
     final String PREFS_THEME = "THEME";
 
     final String[] THEMES = {"Blueberry.Dark", "Blueberry.Light"};
+    // Translated names are in arrays.xml in the same order
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -117,13 +120,26 @@ public abstract class BaseActivity extends Activity {
 
 
     public void changeTheme() {
-        if(THEMES.length - 1  == getPreferredTheme()) {
-            setPreferredTheme(0);
-        } else {
-            setPreferredTheme(getPreferredTheme() + 1);
-        }
-        Toast.makeText(this, getString(R.string.restart_app_message),
-                Toast.LENGTH_LONG).show();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(getString(R.string.select_theme_title));
+        builder.setCancelable(true);
+        builder.setPositiveButton(android.R.string.ok,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+        });
+        builder.setSingleChoiceItems(R.array.theme_names, getPreferredTheme(),
+                 new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int item) {
+                        if(item != getPreferredTheme()) {
+                            Toast.makeText(BaseActivity.this,
+                                R.string.restart_app_message,
+                                    Toast.LENGTH_LONG).show();
+                            setPreferredTheme(item);
+                        }
+                    }
+        }).show();
     }
 
     public int getPreferredTheme() {

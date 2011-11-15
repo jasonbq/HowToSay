@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="theme_names">
+        <item>Blueberry Dark</item>
+        <item>Blueberry Light</item>
+    </string-array>
+</resources>

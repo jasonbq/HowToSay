@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="theme_names">
+        <item>Черника (тёмная)</item>
+        <item>Черника (светлая)</item>
+    </string-array>
+</resources>
