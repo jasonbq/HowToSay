@@ -391,6 +391,8 @@
          Due to Java naming rules "x-tp" code is "xtp",
          and "new" code is "new_".-->
     <!--
+    <string name="mfo"></string>
+    <string name="nxq"></string>
     <string name="ab"></string>
     <string name="ady"></string>
     <string name="aa"></string>
