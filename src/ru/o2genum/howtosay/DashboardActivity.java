@@ -71,6 +71,8 @@ public class DashboardActivity extends BaseActivity
     RelativeLayout layout;
 
     //Honeycomb
+    SearchView searchView;
+
     LinearLayout content;
 
     String query = null;
@@ -84,6 +86,7 @@ public class DashboardActivity extends BaseActivity
 
     SidebarItemView wordsTab, pronunciationsTab, aboutTab, setApiKeyTab,
                     moreTab;
+    ListView wordListView, pronunciationListView;
 
     // Set API key
     EditText editKey;
@@ -104,8 +107,46 @@ public class DashboardActivity extends BaseActivity
 
     @Override
     public void onConfigurationChanged(Configuration newConfiguration) {
+        boolean iconified = searchView.isIconified();
+        boolean w = wordsTab.isSelected(),
+                p = pronunciationsTab.isSelected(),
+                a = aboutTab.isSelected(),
+                s = setApiKeyTab.isSelected(),
+                m = moreTab.isSelected();
+        String backupQuery = query;
         super.onConfigurationChanged(newConfiguration);
+        if(is11Plus() && hasLargeScreen()) {
+            initializeBasicUI();
+        }
         initializeUI();
+        if(w) {
+            wordsTab.setSelected(true);
+        } else if(p) {
+            pronunciationsTab.setSelected(true);
+        } else if(a) {
+            aboutTab.setSelected(true);
+        } else if(s) {
+            setApiKeyTab.setSelected(true);
+        } else if(m) {
+            moreTab.setSelected(true);
+        }
+
+        searchView.setQuery(backupQuery, false);
+        query = backupQuery;
+        searchView.setIconified(iconified);
+
+        if(wordsTab.isSelected()) {
+            wordListView = new ListView(this);
+            wordListView.setAdapter(endlessWordAdapter);
+            content.addView(wordListView);
+        } else if(pronunciationsTab.isSelected()) {
+            pronunciationListView = new ListView(this);
+            pronunciationListView.setAdapter(
+                    endlessPronunciationAdapter);
+            content.addView(pronunciationListView);
+        } else if(setApiKeyTab.isSelected()) {
+            onSetApiKeyTabClick();
+        }
     }
 
     public void initializeUI() {
@@ -114,6 +155,7 @@ public class DashboardActivity extends BaseActivity
             content = (LinearLayout) findViewById(R.id.content);
 
             final SearchView sv = (SearchView) findViewById(R.id.searchview);
+            searchView = sv;
             sv.setSubmitButtonEnabled(true);
             sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                 @Override
@@ -326,15 +368,17 @@ public class DashboardActivity extends BaseActivity
     private void doWordSearchLargeScreen() {
         word = new Word(query);
         content.removeAllViews();
-        ListView lv = new ListView(this);
-        content.addView(lv, new ViewGroup.LayoutParams(
+        wordListView = new ListView(this);
+        pronunciationListView = null;
+        content.addView(wordListView, new ViewGroup.LayoutParams(
                     ViewGroup.LayoutParams.FILL_PARENT,
                     ViewGroup.LayoutParams.FILL_PARENT));
         wordAdapter = new WordAdapterLargeScreen(this, 0);
         endlessWordAdapter = new EndlessWordAdapterLargeScreen(this,
                 wordAdapter, R.layout.pendingview);
-        lv.setAdapter(endlessWordAdapter);
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        wordListView.setAdapter(endlessWordAdapter);
+        wordListView.setOnItemClickListener(
+                new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                 int position, long id) {
@@ -408,16 +452,18 @@ public class DashboardActivity extends BaseActivity
     private void doPronunciationSearchLargeScreen() {
         word = new Word(query);
         content.removeAllViews();
-        ListView lv = new ListView(this);
-        content.addView(lv, new ViewGroup.LayoutParams(
+        pronunciationListView = new ListView(this);
+        wordListView = null;
+        content.addView(pronunciationListView, new ViewGroup.LayoutParams(
                     ViewGroup.LayoutParams.FILL_PARENT,
                     ViewGroup.LayoutParams.FILL_PARENT));
         pronunciationAdapter = new PronunciationAdapterLargeScreen(this, 0);
         endlessPronunciationAdapter = 
             new EndlessPronunciationAdapterLargeScreen(this,
                     pronunciationAdapter, R.layout.pendingview);
-        lv.setAdapter(endlessPronunciationAdapter);
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        pronunciationListView.setAdapter(endlessPronunciationAdapter);
+        pronunciationListView
+            .setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                 int position, long id) {
