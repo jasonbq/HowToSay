@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp">
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView android:id="@+id/api_key_explanation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentTop="true"
+        android:autoLink="web"
+        android:textSize="24dp"
+        android:text="@string/api_key_explanation"/>
+    <EditText
+        android:id="@+id/key_edit"
+        android:layout_below="@id/api_key_explanation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:typeface="monospace"
+        android:lines="1"
+        android:textSize="22dp"
+        android:gravity="left|top"
+        android:layout_marginBottom="15dp"/> 
+    <TextView
+        android:id="@+id/key_status"
+        android:layout_below="@id/key_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"/>
+    <Button
+        android:id="@+id/set_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/key_status"
+        android:layout_marginRight="5dp"
+        android:layout_alignRight="@id/key_edit"
+        android:text="@string/set_button"
+        android:textSize="20dp"/>
+</RelativeLayout>
+</ScrollView>

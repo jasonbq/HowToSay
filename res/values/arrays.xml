@@ -5,4 +5,8 @@
         <item>Blueberry Dark</item>
         <item>Blueberry Light</item>
     </string-array>
+    <string-array name="more_menu">
+        <item>Change theme</item>
+        <item>Share</item>
+    </string-array>
 </resources>

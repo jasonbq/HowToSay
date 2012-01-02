@@ -44,8 +44,6 @@ import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -89,6 +87,9 @@ public class DashboardActivity extends BaseActivity
     EditText editKey;
     TextView keyStatus;
     Button setButton;
+
+    KeyState keyState = KeyState.KEY_IS_NOT_SET;
+    String key = "";
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -270,36 +271,6 @@ public class DashboardActivity extends BaseActivity
     private void onSetApiKeyTabClick() {
         content.removeAllViews();
         View view = inflater.inflate(R.layout.set_api_key, content, true);
-        editKey = (EditText) view.findViewById(R.id.key_edit);
-        keyStatus = (TextView) view.findViewById(R.id.key_status);
-        setButton = (Button) view.findViewById(R.id.set_button);
-        loadKeyFromPrefs();
-        updateViews();
-        setButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                storeKey(editKey.getText().toString().trim());
-                loadKeyFromPrefs();
-                updateViews();
-            }
-        });
-    }
-
-    private void updateViews() {
-        editKey.setText(key, TextView.BufferType.EDITABLE);
-        switch(keyState) {
-            case KEY_IS_SET:
-                keyStatus.setText(getString(R.string.key_is_set),
-                        TextView.BufferType.SPANNABLE);
-                break;
-            case KEY_IS_NOT_SET:
-                keyStatus.setText(getString(R.string.key_is_not_set),
-                        TextView.BufferType.SPANNABLE);
-                break;
-            case KEY_SEEMS_WRONG:
-                keyStatus.setText(getString(R.string.key_seems_wrong),
-                        TextView.BufferType.SPANNABLE);
-                break;
-        }
     }
 
     private void onMoreTabClick() {

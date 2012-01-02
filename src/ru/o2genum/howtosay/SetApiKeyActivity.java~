@@ -59,6 +59,31 @@ public class SetApiKeyActivity extends BaseActivity {
         setView(view);
     }
 
+    private void loadKeyFromPrefs() {
+        key = prefs.getString(PREFS_API_KEY, "");
+        key = key.trim();
+        keyState = KeyState.KEY_IS_SET;
+        if(key.length() == 0) {
+            keyState  = KeyState.KEY_IS_NOT_SET;
+            return;
+        }
+        if(key.length() != 32) {
+            keyState = KeyState.KEY_SEEMS_WRONG;
+            return;
+        }
+        for(int i = 0; i < key.length(); i++) {
+            char c = key.charAt(i);
+            if(!((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z'))) {
+                keyState = KeyState.KEY_SEEMS_WRONG;
+            }
+        }
+        return;
+    }
+
+    private void storeKey(String key) {
+        prefs.edit().putString(PREFS_API_KEY, key).commit();
+    }
+
     private void updateViews() {
         editKey.setText(key, TextView.BufferType.EDITABLE);
         switch(keyState) {

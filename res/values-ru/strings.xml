@@ -25,6 +25,7 @@
     <string name="forvo_com">Forvo.com</string>
     <string name="about_rate">О программе / оценить</string>
     <string name="dashboard_api_key">API-ключ</string>
+    <string name="more">Ещё...</string>
     <!-- Menu -->
     <string name="change_theme">Сменить тему</string>
     <string name="share_the_app">Поделиться</string>

@@ -4,4 +4,8 @@
         <item>Черника (тёмная)</item>
         <item>Черника (светлая)</item>
     </string-array>
+    <string-array name="more_menu">
+        <item>Сменить тему оформления</item>
+        <item>Поделиться приложением</item>
+    </string-array>
 </resources>

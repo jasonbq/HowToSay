@@ -43,6 +43,16 @@ public class PendingView extends ImageView {
         initializeUI();
     }
 
+    @Override
+    public void onFinishInflate() {
+        initializeUI();
+    }
+
+    @Override
+    public void onVisibilityChanged(View v, int visibility) {
+        initializeUI();
+    }
+
     public void initializeUI() {
         invalidate();
         if(getVisibility() == View.VISIBLE) {

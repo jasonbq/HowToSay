@@ -51,6 +51,6 @@
         android:largeScreens="true"
         android:xlargeScreens="true"
         android:anyDensity="true"/>
-    <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="10"/>
+    <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="11"/>
     <uses-permission android:name="android.permission.INTERNET" />
 </manifest> 

@@ -63,6 +63,11 @@ public class WordSearchActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         Intent intent = getIntent();
+        if(is11Plus() && hasLargeScreen()) {
+            intent.setClass(this, DashboardActivity.class);
+            startActivity(intent); 
+            finish();
+        }
         query = intent.getStringExtra(SearchManager.QUERY);
         word = new Word(query);
         title = getString(R.string.searching_for, query);
