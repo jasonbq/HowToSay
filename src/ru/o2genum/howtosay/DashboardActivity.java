@@ -59,6 +59,7 @@ import android.widget.Toast;
 import ru.o2genum.forvo.Pronunciation;
 import ru.o2genum.forvo.Word;
 import ru.o2genum.forvo.WordAndPronunciation;
+import ru.o2genum.forvo.User;
 
 import com.commonsware.cwac.endless.EndlessAdapter;
 
@@ -137,12 +138,49 @@ public class DashboardActivity extends BaseActivity
 
         if(wordsTab.isSelected()) {
             wordListView = new ListView(this);
+            wordListView.setOnItemClickListener(
+                new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                int position, long id) {
+                EndlessWordAdapterLargeScreen a = 
+            (EndlessWordAdapterLargeScreen) parent.getAdapter();
+        if(!(a.getItemViewType(position) ==
+                Adapter.IGNORE_ITEM_VIEW_TYPE)) {
+            playSound(
+                ((WordAndPronunciation) a.getItem(position))
+                .getPronunciation()
+                .getAudioURL(Pronunciation.AudioFormat.MP3)
+                .toString(), view);
+                } else {
+                    // Pending view was clicked
+                }
+            }
+        });
             wordListView.setAdapter(endlessWordAdapter);
             content.addView(wordListView);
         } else if(pronunciationsTab.isSelected()) {
             pronunciationListView = new ListView(this);
             pronunciationListView.setAdapter(
                     endlessPronunciationAdapter);
+            pronunciationListView
+                .setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view,
+                    int position, long id) {
+                    EndlessPronunciationAdapterLargeScreen a = 
+                (EndlessPronunciationAdapterLargeScreen) parent.getAdapter();
+            if(!(a.getItemViewType(position) ==
+                    Adapter.IGNORE_ITEM_VIEW_TYPE)) {
+                playSound(
+                    ((Pronunciation) a.getItem(position))
+                    .getAudioURL(Pronunciation.AudioFormat.MP3)
+                    .toString(), view);
+                    } else {
+                        // Pending view was clicked
+                    }
+                }
+            });
             content.addView(pronunciationListView);
         } else if(setApiKeyTab.isSelected()) {
             onSetApiKeyTabClick();
@@ -406,12 +444,21 @@ public class DashboardActivity extends BaseActivity
 
         public View getView(int position, View convertView, ViewGroup parent) {
             if(convertView == null) {
-                convertView = (View) inflater.inflate(R.layout.list_item, null);
+                convertView = (View) inflater.inflate(R.layout.word_list_item,
+                        null);
             }
             TextView wordView = (TextView) convertView
                 .findViewById(R.id.wordview);
             wordView.setText((CharSequence) getItem(position).getWord()
                     .getOriginal());
+            TextView pronunciationsNumberView = (TextView) convertView
+                .findViewById(R.id.pronunciations_number_view);
+            int numPronunciations = getItem(position).getWord()
+                .getPronunciationsNumber();
+            pronunciationsNumberView.setText((CharSequence)
+                    String.format(getResources()
+                        .getQuantityString(R.plurals.pronunciation_s,
+                        numPronunciations), numPronunciations));
             return convertView;
         }
     }
@@ -490,15 +537,31 @@ public class DashboardActivity extends BaseActivity
 
         public View getView(int position, View convertView, ViewGroup parent) {
             if(convertView == null) {
-                convertView = (View) inflater.inflate(R.layout.list_item, null);
+                convertView = (View) inflater
+                    .inflate(R.layout.pronunciation_list_item, null);
             }
             TextView langView = (TextView) convertView
-                .findViewById(R.id.wordview);
+                .findViewById(R.id.languageview);
             langView.setText((CharSequence) 
                     (getLocalizedLanguageName(getItem(position)
                                               .getLanguage()
                                               .getCode(),
                     getItem(position).getLanguage().getLanguageName())));
+            TextView etcView = (TextView) convertView
+                .findViewById(R.id.etc_view);
+            etcView.setText((CharSequence) (
+                        getLocalizedCountryName(getItem(position)
+                            .getUser().getCountry()) + ", " +
+                        getItem(position).getUser().getUserName() +
+                        " (" + (getItem(position).getUser().getSex() ==
+                                User.Sex.Male ? getString(R.string.male) :
+                                getString(R.string.female)) + ")"));
+            TextView rateView = (TextView) convertView
+                .findViewById(R.id.rate_view);
+            int rate = getItem(position).getRate();
+            String rateString = new Integer(rate).toString();
+            rateView.setText((CharSequence) (rate > 0 ? "+" + rateString :
+                        rateString));
             return convertView;
         }
     }
