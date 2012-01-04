@@ -104,6 +104,7 @@ public class DashboardActivity extends BaseActivity
             Toast.makeText(this, getString(R.string.set_api_key_toast),
                     Toast.LENGTH_LONG).show();
         }
+            inflater.inflate(R.layout.start_screen, content, true);
     }
 
     @Override
@@ -130,6 +131,8 @@ public class DashboardActivity extends BaseActivity
             setApiKeyTab.setSelected(true);
         } else if(m) {
             moreTab.setSelected(true);
+        } else {
+            inflater.inflate(R.layout.start_screen, content, true);
         }
 
         searchView.setQuery(backupQuery, false);
@@ -191,9 +194,6 @@ public class DashboardActivity extends BaseActivity
         if(is11Plus() && hasLargeScreen()) {
             // Honeycomb
             content = (LinearLayout) findViewById(R.id.content);
-            inflater.inflate(R.layout.start_screen, content, true);
-            StartScreenView ssv = (StartScreenView) content
-                .findViewById(R.id.start_screen_view);
 
             final SearchView sv = (SearchView) findViewById(R.id.searchview);
             searchView = sv;
