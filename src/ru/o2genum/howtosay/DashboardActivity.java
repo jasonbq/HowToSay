@@ -191,6 +191,9 @@ public class DashboardActivity extends BaseActivity
         if(is11Plus() && hasLargeScreen()) {
             // Honeycomb
             content = (LinearLayout) findViewById(R.id.content);
+            inflater.inflate(R.layout.start_screen, content, true);
+            StartScreenView ssv = (StartScreenView) content
+                .findViewById(R.id.start_screen_view);
 
             final SearchView sv = (SearchView) findViewById(R.id.searchview);
             searchView = sv;

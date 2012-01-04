@@ -37,6 +37,8 @@
         <item quantity="one">1 pronunciation</item>
         <item quantity="other">%d pronunciations</item>
     </plurals>
+    <string name="start_screen_pronunciations">pronunciations</string>
+    <string name="start_screen_words">words</string>
     <string name="search_for_pronunciations">Search for pronunciations</string>
     <!-- Set API key activity -->
     <string name="set_button">Set</string>

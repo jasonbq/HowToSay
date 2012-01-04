@@ -37,6 +37,9 @@
         <item quantity="one">1 произношение</item>
         <item quantity="other">%d произн.</item>
     </plurals>
+    <!-- Start screen -->
+    <string name="start_screen_pronunciations">произношений</string>
+    <string name="start_screen_words">слов</string>
     <string name="search_for_pronunciations">Найти произношения</string>
     <!-- Set API key activity -->
     <string name="set_button">Установить</string>
