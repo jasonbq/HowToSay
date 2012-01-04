@@ -104,79 +104,62 @@ public class DashboardActivity extends BaseActivity
             Toast.makeText(this, getString(R.string.set_api_key_toast),
                     Toast.LENGTH_LONG).show();
         }
+        if(is11Plus() && hasLargeScreen())
             inflater.inflate(R.layout.start_screen, content, true);
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfiguration) {
-        boolean iconified = searchView.isIconified();
-        boolean w = wordsTab.isSelected(),
-                p = pronunciationsTab.isSelected(),
-                a = aboutTab.isSelected(),
-                s = setApiKeyTab.isSelected(),
-                m = moreTab.isSelected();
-        String backupQuery = query;
+        boolean iconified = true, w = false, p = false, a = false, 
+                s = false, m = false;
+        String backupQuery = "";
+        if(is11Plus() && hasLargeScreen()) {
+            iconified = searchView.isIconified();
+            w = wordsTab.isSelected();
+            p = pronunciationsTab.isSelected();
+            a = aboutTab.isSelected();
+            s = setApiKeyTab.isSelected();
+            m = moreTab.isSelected();
+            backupQuery = query;
+        }
         super.onConfigurationChanged(newConfiguration);
         if(is11Plus() && hasLargeScreen()) {
             initializeBasicUI();
         }
         initializeUI();
-        if(w) {
-            wordsTab.setSelected(true);
-        } else if(p) {
-            pronunciationsTab.setSelected(true);
-        } else if(a) {
-            aboutTab.setSelected(true);
-        } else if(s) {
-            setApiKeyTab.setSelected(true);
-        } else if(m) {
-            moreTab.setSelected(true);
-        } else {
-            inflater.inflate(R.layout.start_screen, content, true);
-        }
-
-        searchView.setQuery(backupQuery, false);
-        query = backupQuery;
-        searchView.setIconified(iconified);
-
-        if(wordsTab.isSelected()) {
-            wordListView = new ListView(this);
-            wordListView.setOnItemClickListener(
-                new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                int position, long id) {
-                EndlessWordAdapterLargeScreen a = 
-            (EndlessWordAdapterLargeScreen) parent.getAdapter();
-        if(!(a.getItemViewType(position) ==
-                Adapter.IGNORE_ITEM_VIEW_TYPE)) {
-            playSound(
-                ((WordAndPronunciation) a.getItem(position))
-                .getPronunciation()
-                .getAudioURL(Pronunciation.AudioFormat.MP3)
-                .toString(), view);
-                } else {
-                    // Pending view was clicked
-                }
+        if(is11Plus() && hasLargeScreen()) {
+            if(w) {
+                wordsTab.setSelected(true);
+            } else if(p) {
+                pronunciationsTab.setSelected(true);
+            } else if(a) {
+                aboutTab.setSelected(true);
+            } else if(s) {
+                setApiKeyTab.setSelected(true);
+            } else if(m) {
+                moreTab.setSelected(true);
+            } else {
+                inflater.inflate(R.layout.start_screen, content, true);
             }
-        });
-            wordListView.setAdapter(endlessWordAdapter);
-            content.addView(wordListView);
-        } else if(pronunciationsTab.isSelected()) {
-            pronunciationListView = new ListView(this);
-            pronunciationListView.setAdapter(
-                    endlessPronunciationAdapter);
-            pronunciationListView
-                .setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            searchView.setQuery(backupQuery, false);
+            query = backupQuery;
+            searchView.setIconified(iconified);
+
+            if(wordsTab.isSelected()) {
+                wordListView = new ListView(this);
+                wordListView.setOnItemClickListener(
+                    new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view,
                     int position, long id) {
-                    EndlessPronunciationAdapterLargeScreen a = 
-                (EndlessPronunciationAdapterLargeScreen) parent.getAdapter();
+                    EndlessWordAdapterLargeScreen a = 
+                (EndlessWordAdapterLargeScreen) parent.getAdapter();
             if(!(a.getItemViewType(position) ==
                     Adapter.IGNORE_ITEM_VIEW_TYPE)) {
                 playSound(
-                    ((Pronunciation) a.getItem(position))
+                    ((WordAndPronunciation) a.getItem(position))
+                    .getPronunciation()
                     .getAudioURL(Pronunciation.AudioFormat.MP3)
                     .toString(), view);
                     } else {
@@ -184,15 +167,41 @@ public class DashboardActivity extends BaseActivity
                     }
                 }
             });
-            content.addView(pronunciationListView);
-        } else if(setApiKeyTab.isSelected()) {
-            onSetApiKeyTabClick();
+                wordListView.setAdapter(endlessWordAdapter);
+                content.addView(wordListView);
+            } else if(pronunciationsTab.isSelected()) {
+                pronunciationListView = new ListView(this);
+
+                pronunciationListView.setAdapter(endlessPronunciationAdapter);
+                pronunciationListView.setOnItemClickListener(
+                        new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view,
+                        int position, long id) {
+                        EndlessPronunciationAdapterLargeScreen a = 
+                    (EndlessPronunciationAdapterLargeScreen)
+                    parent.getAdapter();
+
+                if(!(a.getItemViewType(position) ==
+                        Adapter.IGNORE_ITEM_VIEW_TYPE)) {
+                    playSound(
+                        ((Pronunciation) a.getItem(position))
+                        .getAudioURL(Pronunciation.AudioFormat.MP3)
+                        .toString(), view);
+                        } else {
+                            // Pending view was clicked
+                        }
+                    }
+                });
+                content.addView(pronunciationListView);
+            } else if(setApiKeyTab.isSelected()) {
+                onSetApiKeyTabClick();
+            }
         }
     }
 
     public void initializeUI() {
         if(is11Plus() && hasLargeScreen()) {
-            // Honeycomb
             content = (LinearLayout) findViewById(R.id.content);
 
             final SearchView sv = (SearchView) findViewById(R.id.searchview);
@@ -287,8 +296,8 @@ public class DashboardActivity extends BaseActivity
                 }
             });
             TextView textView = (TextView) layout.findViewById(R.id.text_view);
-            textView.setText(Html.fromHtml(
-                        getString(R.string.forvo_attribution)));
+            textView.setText(Html.fromHtml(getString(
+                            R.string.forvo_attribution)));
             adapter.addAction(new Action(R.drawable.ic_pronunciations,
                         getString(R.string.pronunciations)) {
                 @Override

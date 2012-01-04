@@ -9,6 +9,7 @@ src/ru/o2genum/howtosay/Secret.java
 *.apk
 *.ap_
 *.swp
+*.*~
 build.xml
 local.properties
 proguard.cfg
