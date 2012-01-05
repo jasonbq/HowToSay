@@ -9,6 +9,8 @@ This is a pronunciation guide application for Android based on [Forvo](http://fo
 <img src="/o2genum/HowToSay/raw/master/etc/png/screenshot-3.png" width="18%"/>&nbsp;
 <img src="/o2genum/HowToSay/raw/master/etc/png/screenshot-4.png" width="18%"/>&nbsp;
 <img src="/o2genum/HowToSay/raw/master/etc/png/screenshot-5.png" width="18%"/>
+<br>
+<img src="/o2genum/HowToSay/raw/master/etc/png/screenshot-6.png" width="94%"/>
 </p>
 
 For developers
