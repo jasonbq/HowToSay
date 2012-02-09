@@ -38,8 +38,7 @@ public class SetApiKeyActivity extends BaseActivity {
     TextView keyStatus;
     Button setButton;
 
-    KeyState keyState = KeyState.KEY_IS_NOT_SET;
-    String key = "";
+    //KeyState keyState = KeyState.KEY_IS_NOT_SET;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +50,8 @@ public class SetApiKeyActivity extends BaseActivity {
         updateViews();
         setButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                storeKey(editKey.getText().toString().trim());
+                key = editKey.getText().toString().trim();
+                storeKey(key);
                 loadKeyFromPrefs();
                 updateViews();
             }
@@ -76,4 +76,5 @@ public class SetApiKeyActivity extends BaseActivity {
                 break;
         }
     }
+
 }
