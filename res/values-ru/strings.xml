@@ -29,6 +29,7 @@
     <!-- Menu -->
     <string name="change_theme">Сменить тему</string>
     <string name="share_the_app">Поделиться</string>
+    <string name="help_translate">Перевести программу</string>
     <!-- Word search activity -->
     <string name="searching_for">Поиск \"%s\"</string>
     <!-- As I see, android plurals are broken. Don't work right. -->
@@ -651,4 +652,8 @@
     <string name="zza">Зазаки</string>
     <string name="za">Чжуань</string>
     <string name="zu">Зулусский</string>
+    <!-- Chagelog -->
+    <string name="changelog_full_title">История изменений</string>
+    <string name="changelog_title">Что нового</string>
+    <string name="changelog_ok_button">OK</string>
 </resources>

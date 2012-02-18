@@ -8,5 +8,6 @@
     <string-array name="more_menu">
         <item>Change theme</item>
         <item>Share</item>
+        <item>Translate app</item>
     </string-array>
 </resources>

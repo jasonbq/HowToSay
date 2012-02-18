@@ -63,6 +63,8 @@ import ru.o2genum.forvo.User;
 
 import com.commonsware.cwac.endless.EndlessAdapter;
 
+import sheetrock.panda.changelog.ChangeLog;
+
 import java.util.List;
 import java.util.LinkedList;
 
@@ -106,6 +108,9 @@ public class DashboardActivity extends BaseActivity
         }
         if(is11Plus() && hasLargeScreen())
             inflater.inflate(R.layout.start_screen, content, true);
+        ChangeLog changeLog = new ChangeLog(this);
+        if(changeLog.firstRun())
+            changeLog.getLogDialog().show();
     }
 
     @Override
@@ -355,7 +360,7 @@ public class DashboardActivity extends BaseActivity
     private void onAboutTabClick() {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("http://market.android.com/details?id="+
-                    "ru.o2genum.howtosay"));;
+                    "ru.o2genum.howtosay"));
         startActivity(intent);
     }
 
@@ -406,6 +411,8 @@ public class DashboardActivity extends BaseActivity
                         break;
                     case 1:
                         shareApp();
+                    case 2:
+                        helpTranslate();
                         break;
                 }
             }
@@ -628,6 +635,9 @@ public class DashboardActivity extends BaseActivity
             case R.id.share_app:
                 shareApp();
                 return true;
+            case R.id.help_translate:
+                helpTranslate();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -640,6 +650,12 @@ public class DashboardActivity extends BaseActivity
                 getString(R.string.share_app_subject));
         intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_app_text)
                 + " http://bit.ly/htsay");
+        startActivity(intent);
+    }
+
+    private void helpTranslate() {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("http://bit.ly/hts-translate"));
         startActivity(intent);
     }
 

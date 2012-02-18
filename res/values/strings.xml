@@ -30,6 +30,7 @@
     <!-- Menu -->
     <string name="change_theme">Change theme</string>
     <string name="share_the_app">Share</string>
+    <string name="help_translate">Thanslate this app</string>
     <!-- Word search activity -->
     <string name="searching_for">Searching for \"%s\"</string>
     <!-- Looks like that cool plurals localization mechanism is broken. I worked with Russian and plurals behaved very strangely. I recommend you only to set "one" and "other" values. Try something like "pronunciations: %d" (try to create a phrase that suitable for every number). Example two: in Russian I used abbreviation: "%d произн." - the ending of the word changes depending on value of %d, but I just cut it out. -->
@@ -375,16 +376,16 @@
     <string name="yemen"></string>
     <string name="zambia"></string>
     <string name="zimbabwe"></string>
-    <string name="congo_democratic_republic_of_the"><string>
-    <string name="congo_democratic_republic_of"><string>
-    <string name="congo_republic_of"><string>
-    <string name="gambia_the"><string>
-    <string name="korea_north"><string>
-    <string name="korea_south"><string>
-    <string name="korea_republic_of"><string>
-    <string name="micronesia_federated_states_of"><string>
-    <string name="micronesia_states_of"><string>
-    <string name="bahamas_the"><string>
+    <string name="congo_democratic_republic_of_the"></string>
+    <string name="congo_democratic_republic_of"></string>
+    <string name="congo_republic_of"></string>
+    <string name="gambia_the"></string>
+    <string name="korea_north"></string>
+    <string name="korea_south"></string>
+    <string name="korea_republic_of"></string>
+    <string name="micronesia_federated_states_of"></string>
+    <string name="micronesia_states_of"></string>
+    <string name="bahamas_the"></string>
     <string name="svalbard_and_jan_mayen"></string>
     -->
     <!-- Stand up and look out the window. -->
@@ -676,4 +677,8 @@
     <string name="za"></string>
     <string name="zu"></string>
     -->
+    <!-- Chagelog -->
+    <string name="changelog_full_title">Change Log</string>
+    <string name="changelog_title">What\'s New</string>
+    <string name="changelog_ok_button">OK</string>
 </resources>

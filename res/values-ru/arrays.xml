@@ -7,5 +7,6 @@
     <string-array name="more_menu">
         <item>Сменить тему оформления</item>
         <item>Поделиться приложением</item>
+        <item>Перевести программу</item>
     </string-array>
 </resources>

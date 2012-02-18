@@ -32,11 +32,7 @@ How to get a working copy of the project:
 Now you likely have everything I have in my project directory. Please, read Android Code Style Guidelines (yes, code must be beautiful) and feel free to join the development.
 
 ### Project needs translations
-Every translation will be appreciated. If you're not familar with git, download files, translate them into your language (guidelines are included) and send them to me (my e-mail is o2(at)nm.ru). I think it's possible to do even if you're not familar with Android and XML. Following files need to be translated:
-
- * [arrays.xml](/o2genum/HowToSay/blob/master/res/values/arrays.xml)
- * [strings.xml](/o2genum/HowToSay/blob/master/res/values/strings.xml)
- * [etc/market_description](/o2genum/HowToSay/blob/master/etc/market_description)
+https://www.transifex.net/projects/p/HowToSay/
 
 Special thanks to:
 -----------------
@@ -44,6 +40,7 @@ Special thanks to:
  * [johannilsson/android-actionbar](/johannilsson/android-actionbar) project for awesome action bar
  * [commonsguy/cwac-endless](/commonsguy/cwac-endless) for endless list adapter
  * [Inkscape](http://inkscape.org/) project (everything was drawn using that incredible SVG editor)
+ * Karsten Priegnitz for [android-change-log](http://code.google.com/p/android-change-log/)
  * [Clker.com](http://www.clker.com/clipart-black-and-white-globe.html) for B&W globe SVG that I shamelessly copy-pasted from that site
  * [Yay.se](http://www.yay.se/resources/android-native-icons) for home and search actionbar icons
  * Alexander Boblak (Alex3n) for good tips

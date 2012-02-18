@@ -6,4 +6,7 @@
     <item android:id="@+id/share_app"
         android:icon="@android:drawable/ic_menu_share"
         android:title="@string/share_the_app"/>
+    <item android:id="@+id/help_translate"
+        android:icon="@android:drawable/ic_menu_mapmode"
+        android:title="@string/help_translate"/>
 </menu>
