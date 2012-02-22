@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Nasıl söylenir</string>
+  <string name="error_exception">Hata! İnternet bağlantınızı kontrol edin, kişisel API anahtarı edinin ve anahtarınızın geçerli ve süresinin dolmamış olduğundan emin olun.</string>
+  <string name="set_api_key_toast">API anahtarınızı ayarlamak için \"API anahtarı\"na tıklayın!</string>
+  <string name="api_key_explanation">Forvo 3. kişi yazılımların (ve bu yazılımın) kaynaklarına erişmesine izin verir. Yalnız her yazılım bütün kullanıcılarının toplamda günlük 1000 talep hakkı vardır. Bundan ötürü bu yazılım diğer kullanıcılar günlük limiti aşmış olabileceğinden bazen çalışmayabilir. Yani size <b>kendi ücretsiz API anahtarınızı http://api.forvo.com da kayıt ettirip aşağıya girmenizi</b> tavsiye ediyorum. İyi şanslar: anahtar epeyce uzun!</string>
+  <string name="pronunciations_of">\"%s\" kelimesinin telafuzları</string>
+  <string name="male">bay</string>
+  <string name="female">bayan</string>
+  <string name="select_theme_title">Tema seç</string>
+  <string name="share_app_text">Harika bir telafuz yardımcısı! How to Say Android Markette</string>
+  <string name="share_app_subject">How to Say Android Markette</string>
+  <string name="restart_app_message">Lütfen yeni temayı uygulamak için uygulamayı yeniden başlatın</string>
+  <string name="forvo_attribution"><a href='http://forvo.com'>Forvo.com</a> temelli</string>
+  <string name="words">Kelimeler</string>
+  <string name="pronunciations">Telafuzlar</string>
+  <string name="forvo_com">Forvo.com</string>
+  <string name="about_rate">Hakkında / Uygulamayı değerlendir</string>
+  <string name="dashboard_api_key">API anahtarı</string>
+  <string name="more">Dahası...</string>
+  <string name="change_theme">Temayı değiştir</string>
+  <string name="share_the_app">Paylaş</string>
+  <string name="help_translate">Uygulamayı tercüme et</string>
+  <string name="searching_for">\"%s\" aranıyor</string>
+  <plurals name="pronunciation_s">
+    <item quantity="one">1 telafuz</item>
+    <item quantity="other">%d telafuz</item>
+  </plurals>
+  <string name="start_screen_pronunciations">telafuzlar</string>
+  <string name="start_screen_words">kelimeler</string>
+  <string name="search_for_pronunciations">Telafuz ara</string>
+  <string name="set_button">Ayarla</string>
+  <string name="key_is_set">API anahtarı ayarlandı</string>
+  <string name="key_is_not_set">API anahtarı ayarlı değil</string>
+  <string name="key_seems_wrong">API anahtarı yanlış gibi</string>
+  <string name="how_to_say_intent">Nasıl söylenir?</string>
+  <string name="search_hint">Kelime ara</string>
+  <string name="settings_description">Kelime ve telafuz ara</string>
+  <string name="changelog_full_title">Değişiklik kaydı</string>
+  <string name="changelog_title">Neler yeni</string>
+  <string name="changelog_ok_button">Tamam</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string-array name="theme_names"><item>Yaban Mersini Koyu</item>
+<item>Yaban Mersini Açık</item>
+</string-array>
+  <string-array name="more_menu"><item>Temayı değiştir</item>
+<item>Paylaş</item>
+<item>Yazılımı tercüme et</item>
+</string-array>
+</resources>
