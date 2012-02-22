@@ -15,8 +15,14 @@
       div.freetext { color:#F0F0F0 }
       div.list     { color:#C0C0F0 }
     </style></head><body>
+$ 2.1.1
+  % Versiyon 2.1.1
+  _ 22.02.2012
+    * Portekizce (Pedro Coelho)
+    * Türkçe (Hakan)
+
 $ 2.1-fixed
-  % Version 2.1-fixed
+  % Versiyon 2.1-fixed
   _ 17.02.2012
     * Dil bilginiz iyi mi? Bu yazılımı <a href="http://bit.ly/hts-translate">tercüme etmeme yardım edebilirsiniz</a>! Bu bağlantı aynı zamana 'Dahası' menüsündede mevcuttur.
     * Artık API anahtarı ayarlaması telefonlarda da çalışıyor

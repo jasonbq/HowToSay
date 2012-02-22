@@ -15,8 +15,14 @@
       div.freetext { color:#F0F0F0 }
       div.list     { color:#C0C0F0 }
     </style></head><body>
+$ 2.1.1
+  % Versão 2.1.1
+  _ 22.02.2012
+    * Еradução em Português (Pedro Coelho)
+    * Tradução Turco (Hakan)
+
 $ 2.1-fixed
-  % Version 2.1-fixed
+  % Versão 2.1-fixed
   _ 17.02.2012
     * Pode <a href="http://bit.ly/hts-translate">ajudar a traduzir esta aplicação</a>! Também pode encontrar este link no menu 'Mais'
     * Agora definir a API key funciona bem.

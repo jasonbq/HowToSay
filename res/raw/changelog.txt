@@ -19,10 +19,17 @@
     </style>
   </head>
   <body>
+$ 2.1.1
+  % Version 2.1.1
+  _ 22.02.2012
+    * Portuguese translation (by Pedro Coelho)
+    * Turkish translation (by Hakan)
+    * Press menu key or click <i>More...</i> - <i>Translate</i> to get involved!
+
 $ 2.1-fixed
   % Version 2.1-fixed
   _ 17.02.2012
-    * Know languages? You can <a href="http://bit.ly/hts-translate">help me translate this app</a>! This link is also available in 'More' menu
+    * Know languages? You can <a href="http://bit.ly/hts-translate">help me translate this app</a>! This link is also available in <i>More</i> menu
     * Now setting API key works well on phones
     * An awesome changelog
 $ END_OF_CHANGE_LOG
