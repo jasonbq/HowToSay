@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string-array name="theme_names"><item>Blueberry Escuro</item>
+<item>Blueberry Claro</item>
+</string-array>
+  <string-array name="more_menu"><item>Mudar tema</item>
+<item>Partilhar</item>
+<item>Traduzir aplicação</item>
+</string-array>
+</resources>

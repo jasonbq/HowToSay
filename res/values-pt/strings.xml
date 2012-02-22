@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--<string name="app_name">Como se Pronuncia</string>-->
+  <string name="error_exception">Erro! Verifique a sua ligação à internet, obtenha uma API key pessoal e certifique-se que é válida.</string>
+  <string name="set_api_key_toast">Selecione \"API key\" para definir a sua API key.</string>
+  <string name="api_key_explanation">Forvo permite que aplicações externas (incluindo esta) acedam aos seus recursos. Mas apenas são permitidos 1000 pedidos por dia para todos os utilizadores de cada aplicação. Desta forma, esta aplicação poderá, por vezes, não funcionar pois outros utilizares poderão exceder este limite. Assim eu recomendo que <b>registem a vossa API key gratuita em http://api.forvo.com e coloquem-na em baixo</b>. Boa sorte!</string>
+  <string name="pronunciations_of">Pronunciações de \"%s\"</string>
+  <string name="male">masculino</string>
+  <string name="female">feminino</string>
+  <string name="select_theme_title">Escolha o tema</string>
+  <string name="share_app_text">Um guia de Pronunciação! How to Say @ Android Market</string>
+  <string name="share_app_subject">How to Say @ Android Market</string>
+  <string name="restart_app_message">Por favor, reinicie a aplicação para aplicar o tema.</string>
+  <string name="forvo_attribution">Powered by <a href='http://forvo.com'>Forvo.com</a></string>
+  <string name="words">Palavras</string>
+  <string name="pronunciations">Pronunciações</string>
+  <string name="forvo_com">Forvo.com</string>
+  <string name="about_rate">Acerca / Classifique a app</string>
+  <string name="dashboard_api_key">API key</string>
+  <string name="more">Mais...</string>
+  <string name="change_theme">Mudar o tema</string>
+  <string name="share_the_app">Partilhar</string>
+  <string name="help_translate">Traduza esta aplicação</string>
+  <string name="searching_for">Pesquisa por \"%s\"</string>
+  <plurals name="pronunciation_s">
+    <item quantity="one">1 pronunciação</item>
+    <item quantity="other">%d pronunciações</item>
+  </plurals>
+  <string name="start_screen_pronunciations">pronunciações</string>
+  <string name="start_screen_words">palavras</string>
+  <string name="search_for_pronunciations">Procure pronunciações</string>
+  <string name="set_button">Definir</string>
+  <string name="key_is_set">A API key está definida</string>
+  <string name="key_is_not_set">A API key não está definida</string>
+  <string name="key_seems_wrong">A API key parece inválida</string>
+  <string name="how_to_say_intent">Como dizer?</string>
+  <string name="search_hint">Pesquisar palavras</string>
+  <string name="settings_description">Pesquisar palavras e suas pronunciações</string>
+  <string name="changelog_full_title">Change Log</string>
+  <string name="changelog_title">O que há de novo</string>
+  <string name="changelog_ok_button">OK</string>
+</resources>
