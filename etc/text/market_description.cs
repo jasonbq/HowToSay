@@ -1,0 +1,23 @@
+-- Description --
+Toto je průvodce pro výslovnost. Napište slovo ー a poslouchejte, jak se vyslovuje! Program využívá zdroje Forvo.com a v současnosti pracuje jako jeho neoficiální klient.
+
+* Program je úplně zadarmo
+* Program je ad-free
+* Program je open-source (Apache 2.0 License)
+* Veškerá výslovnost je poskytována rodilými mluvčími
+* Program je přeložen do angličtiny, češtiny, portugalštiny, ruštiny a turečtiny
+* Uzpůsobeno pro Android 3.0+ tablets
+
+Projekt je zde: https://github.com/o2genum/HowToSay
+
+Jsi programátorem pro Android? Připoj se k projektu! 
+
+Umíš jazyky? Jakákoli pomoc s překlady se cení http://bit.ly/hts-translate
+
+Našel jsi chybu? https://github.com/o2genum/HowToSay/issues
+
+Nezapomeňte How to Say ohodnotit nebo mu přidejte +1!
+-- Chagelog --
+Celou historii projektu si můžete přečíst tady: https://github.com/o2genum/HowToSay/commits
+-- Promo text --
+Výslovnost všech slov na světě. Jak říct - How to Say.

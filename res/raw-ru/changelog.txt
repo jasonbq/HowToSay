@@ -19,8 +19,13 @@
     </style>
   </head>
   <body>
+$ 2.1.2
+  % Версия 2.1.2
+  _ 04.03.2012
+    * <a href="https://www.transifex.net/projects/p/HowToSay/">Перевод</a> на чешский (спасибо Pavel Fric)
+
 $ 2.1.1
-  % Version 2.1.1
+  % Версия 2.1.1
   _ 22.02.2012
     * Португальский перевод (Pedro Coelho)
     * Турецкий перевод (Hakan)

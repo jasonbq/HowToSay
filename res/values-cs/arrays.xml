@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string-array name="theme_names"><item>Borůvkový tmavý</item>
+<item>Borůvkový světlý</item>
+</string-array>
+  <string-array name="more_menu"><item>Změnit motiv</item>
+<item>Sdílet</item>
+<item>Přeložit program</item>
+</string-array>
+</resources>

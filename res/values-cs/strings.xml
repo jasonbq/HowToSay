@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--<string name="app_name">Jak říct</string>-->
+  <string name="app_name">How to Say</string>
+  <string name="error_exception">Chyba! Prověřte připojení k internetu, obdržte osobní klíč API a ujistěte se, že je platný a není prošlý.</string>
+  <string name="set_api_key_toast">Klepněte na \"Klíč API\" pro nastavení vašeho klíče API!</string>
+  <string name="api_key_explanation">Forvo umožňuje aplikacím třetích stran (a zvláště tomuto programu) přistupovat ke svým zdrojům. Ale všem uživatelům každé aplikace je dovoleno pouze 1000 žádostí za den. Z toho důvodu program někdy nemusí pracovat, protože byla tato hranice již překročena. Takže vám doporučuji zaregistrování <b>vašeho vlastního klíče API zdarma na http://api.forvo.com a zadejte jej níže</b>. Hodně štěstí: klíč je zatraceně dlouhý!</string>
+  <string name="pronunciations_of">Vyslovování \"%s\"</string>
+  <string name="male">muž</string>
+  <string name="female">žena</string>
+  <string name="select_theme_title">Vybrat motiv</string>
+  <string name="share_app_text">Skvělý průvodce pro výslovnost! How to Say @ Android Market</string>
+  <string name="share_app_subject">How to Say @ Android Market</string>
+  <string name="restart_app_message">Spusťte, prosím, aplikaci znovu pro použití motivu</string>
+  <string name="forvo_attribution">Napájeno <a href='http://forvo.com'>Forvo.com</a></string>
+  <string name="words">Slova</string>
+  <string name="pronunciations">Výslovnost</string>
+  <string name="forvo_com">Forvo.com</string>
+  <string name="about_rate">O programu/Hodnocení</string>
+  <string name="dashboard_api_key">Klíč API</string>
+  <string name="more">Více...</string>
+  <string name="change_theme">Změnit motiv</string>
+  <string name="share_the_app">Sdílet</string>
+  <string name="help_translate">Přeložit program</string>
+  <string name="searching_for">Hledání \"%s\"</string>
+  <plurals name="pronunciation_s">
+    <item quantity="one">1 výslovnost</item>
+    <item quantity="few">%d výslovnosti</item>
+    <item quantity="other">%d výslovnosti</item>
+  </plurals>
+  <string name="start_screen_pronunciations">výslovnost</string>
+  <string name="start_screen_words">slova</string>
+  <string name="search_for_pronunciations">Hledat výslovnost</string>
+  <string name="set_button">Nastavit</string>
+  <string name="key_is_set">Klíč API je nastaven</string>
+  <string name="key_is_not_set">Klíč API není nastaven</string>
+  <string name="key_seems_wrong">Zdá se, že klíč API je špatný</string>
+  <string name="how_to_say_intent">Jak říct?</string>
+  <string name="search_hint">Hledat slova</string>
+  <string name="settings_description">Hledat slova a jejich výslovnost</string>
+  <string name="changelog_full_title">Seznam změn</string>
+  <string name="changelog_title">Co je nového</string>
+  <string name="changelog_ok_button">OK</string>
+</resources>

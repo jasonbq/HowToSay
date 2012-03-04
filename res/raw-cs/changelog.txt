@@ -16,21 +16,21 @@
       div.list     { color:#C0C0F0 }
     </style></head><body>
 $ 2.1.2
-  % Versiyon 2.1.2
+  % Verze 2.1.2
   _ 04.03.2012
-    * Çek (Pavel Fric)
+    * Český <a href="https://www.transifex.net/projects/p/HowToSay/">překlad</a> (Pavel Fric)
 
 $ 2.1.1
-  % Versiyon 2.1.1
+  % Verze 2.1.1
   _ 22.02.2012
-    * Portekizce (Pedro Coelho)
-    * Türkçe (Hakan)
+    * Portugalský překlad (Pedro Coelho)
+    * Turečtina překlady (Hakan)
 
 $ 2.1-fixed
-  % Versiyon 2.1-fixed
+  % Verze 2.1-fixed
   _ 17.02.2012
-    * Dil bilginiz iyi mi? Bu yazılımı <a href="http://bit.ly/hts-translate">tercüme etmeme yardım edebilirsiniz</a>! Bu bağlantı aynı zamana 'Dahası' menüsündede mevcuttur.
-    * Artık API anahtarı ayarlaması telefonlarda da çalışıyor
-    * Mükemmel bir değişiklik kaydı
+    * Umíte jazyky? Můžete <a href="http://bit.ly/hts-translate">mi pomoci s překladem tohoto programu</a>! Tento odkaz je dostupný i v nabídce Více
+    * Nyní na telefonech pracuje nastavení API key
+    * Úžasný seznam změn
 $ END_OF_CHANGE_LOG
   </body></html>

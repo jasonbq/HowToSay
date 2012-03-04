@@ -15,6 +15,11 @@
       div.freetext { color:#F0F0F0 }
       div.list     { color:#C0C0F0 }
     </style></head><body>
+$ 2.1.2
+  % Versão 2.1.2
+  _ 04.03.2012
+    * Tcheco (Pavel Fric)
+
 $ 2.1.1
   % Versão 2.1.1
   _ 22.02.2012

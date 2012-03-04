@@ -411,6 +411,7 @@ public class DashboardActivity extends BaseActivity
                         break;
                     case 1:
                         shareApp();
+                        break;
                     case 2:
                         helpTranslate();
                         break;
