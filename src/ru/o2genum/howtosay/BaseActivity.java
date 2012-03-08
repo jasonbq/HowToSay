@@ -246,6 +246,9 @@ public abstract class BaseActivity extends Activity {
     }
 
     public String getLocalizedLanguageName(String code, String inEnglish) {
+        if(inEnglish == null) {
+            inEnglish = "Unknown";
+        }
         int id = getStrResId(code);
         String result = inEnglish;
         try {
@@ -259,6 +262,9 @@ public abstract class BaseActivity extends Activity {
     }
 
     public String getLocalizedCountryName(String inEnglish) {
+        if(inEnglish == null) {
+            inEnglish = "Unknown";
+        }
         int id = getStrResId(inEnglish);
         String result = inEnglish;
         try {
