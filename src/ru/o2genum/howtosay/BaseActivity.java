@@ -247,7 +247,7 @@ public abstract class BaseActivity extends Activity {
 
     public String getLocalizedLanguageName(String code, String inEnglish) {
         if(inEnglish == null) {
-            inEnglish = "Unknown";
+            return null;
         }
         int id = getStrResId(code);
         String result = inEnglish;
@@ -263,7 +263,7 @@ public abstract class BaseActivity extends Activity {
 
     public String getLocalizedCountryName(String inEnglish) {
         if(inEnglish == null) {
-            inEnglish = "Unknown";
+            return null;
         }
         int id = getStrResId(inEnglish);
         String result = inEnglish;
@@ -284,7 +284,7 @@ public abstract class BaseActivity extends Activity {
                 .replace("(", "")
                 .replace('-', '_')
                 .replace(",", "");
-        if(result.equals("new")) // "new" is a language code and Java keyword
+        if(result.equals("new")) // "new" is a language code and a Java keyword
             result += "_";
         return getResources().getIdentifier(result, "string",
                 getClass().getPackage().getName());

@@ -569,13 +569,16 @@ public class DashboardActivity extends BaseActivity
                     getItem(position).getLanguage().getLanguageName())));
             TextView etcView = (TextView) convertView
                 .findViewById(R.id.etc_view);
+            String locCountry = getLocalizedCountryName(getItem(position)
+                    .getUser().getCountry());
+            String userName = getItem(position).getUser().getUserName();
+            User.Sex usersSex = getItem(position).getUser().getSex();
             etcView.setText((CharSequence) (
-                        getLocalizedCountryName(getItem(position)
-                            .getUser().getCountry()) + ", " +
-                        getItem(position).getUser().getUserName() +
-                        " (" + (getItem(position).getUser().getSex() ==
-                                User.Sex.Male ? getString(R.string.male) :
-                                getString(R.string.female)) + ")"));
+                    ((locCountry == null) ? "" : (locCountry + ", ")) +
+                    userName +
+                    ((usersSex == null) ? "" : (" (" + 
+                    getString(usersSex == User.Sex.Male ? R.string.male : R.string.female)
+                        + ")"))));
             TextView rateView = (TextView) convertView
                 .findViewById(R.id.rate_view);
             int rate = getItem(position).getRate();
