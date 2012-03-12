@@ -44,6 +44,7 @@ Special thanks to:
  * [Clker.com](http://www.clker.com/clipart-black-and-white-globe.html) for B&W globe SVG that I shamelessly copy-pasted from that site
  * [Yay.se](http://www.yay.se/resources/android-native-icons) for home and search actionbar icons
  * Alexander Boblak (Alex3n) for good tips
+ * Hakan, Pedro Coelho, Pavel Fric for translations
 
 Also, this project uses my another project [o2genum/forvo-java-api](/o2genum/forvo-java-api). Open its page to discover its dependencies.
 
