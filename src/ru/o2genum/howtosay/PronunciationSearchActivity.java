@@ -22,25 +22,25 @@ package ru.o2genum.howtosay;
 
 import android.app.Activity;
 import android.app.SearchManager;
-import android.content.Intent;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
 import android.text.Html;
 import android.text.Spanned;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Adapter;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ListView;
-import android.widget.ArrayAdapter;
-import android.widget.AdapterView;
-import android.widget.ListAdapter;
 
 import ru.o2genum.forvo.Pronunciation;
-import ru.o2genum.forvo.Word;
 import ru.o2genum.forvo.User;
+import ru.o2genum.forvo.Word;
 
 import com.commonsware.cwac.endless.EndlessAdapter;
 

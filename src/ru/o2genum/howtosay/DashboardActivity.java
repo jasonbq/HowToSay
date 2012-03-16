@@ -25,8 +25,8 @@ package ru.o2genum.howtosay;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.SearchManager;
-import android.content.Context;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -35,14 +35,14 @@ import android.os.Bundle;
 import android.text.Html;
 import android.view.inputmethod.InputMethodManager;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
-import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -57,16 +57,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import ru.o2genum.forvo.Pronunciation;
+import ru.o2genum.forvo.User;
 import ru.o2genum.forvo.Word;
 import ru.o2genum.forvo.WordAndPronunciation;
-import ru.o2genum.forvo.User;
 
 import com.commonsware.cwac.endless.EndlessAdapter;
 
 import sheetrock.panda.changelog.ChangeLog;
 
-import java.util.List;
 import java.util.LinkedList;
+import java.util.List;
 
 public class DashboardActivity extends BaseActivity
 {

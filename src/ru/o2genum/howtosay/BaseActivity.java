@@ -23,30 +23,30 @@ package ru.o2genum.howtosay;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.SearchManager;
-import android.content.Context;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.media.MediaPlayer;
+import android.content.SharedPreferences;
 import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.os.Build;
+import android.os.Bundle;
 import android.view.inputmethod.InputMethodManager;
-import android.view.LayoutInflater;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.widget.FrameLayout;
 import android.widget.Toast;
-import android.os.Build;
-import android.os.Bundle;
 
 import java.util.Arrays;
 
-import com.markupartist.android.widget.ActionBar;
 import com.markupartist.android.widget.ActionBar.AbstractAction;
 import com.markupartist.android.widget.ActionBar.IntentAction;
+import com.markupartist.android.widget.ActionBar;
 
 import ru.o2genum.forvo.ApiKey;
 

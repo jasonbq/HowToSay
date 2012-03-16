@@ -21,11 +21,11 @@ package ru.o2genum.howtosay;
  */
 
 import android.content.Context;
-import android.view.animation.AnimationUtils;
+import android.util.AttributeSet;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.View;
 import android.widget.ImageView;
-import android.util.AttributeSet;
 
 public class PendingView extends ImageView {
     Context context;
