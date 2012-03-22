@@ -1,6 +1,6 @@
 gen/
 bin/
-libs/
+libs/*
 src/ru/o2genum/howtosay/Secret.java
 .project
 .classpath
