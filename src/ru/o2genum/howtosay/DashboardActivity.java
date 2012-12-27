@@ -87,7 +87,7 @@ public class DashboardActivity extends BaseActivity
     PronunciationAdapterLargeScreen pronunciationAdapter;
     EndlessPronunciationAdapterLargeScreen endlessPronunciationAdapter;
 
-    SidebarItemView wordsTab, pronunciationsTab, aboutTab, setApiKeyTab,
+    SidebarItemView wordsTab, pronunciationsTab, aboutTab, // setApiKeyTab,
                     moreTab;
     ListView wordListView, pronunciationListView;
 
@@ -102,10 +102,12 @@ public class DashboardActivity extends BaseActivity
         super.onCreate(savedInstanceState);
         initializeUI();
         if(!(is11Plus() && hasLargeScreen()))
+        /*
         if(!isApiKeySet()) {
             Toast.makeText(this, getString(R.string.set_api_key_toast),
                     Toast.LENGTH_LONG).show();
         }
+        */
         if(is11Plus() && hasLargeScreen())
             inflater.inflate(R.layout.start_screen, content, true);
         ChangeLog changeLog = new ChangeLog(this);
@@ -123,7 +125,7 @@ public class DashboardActivity extends BaseActivity
             w = wordsTab.isSelected();
             p = pronunciationsTab.isSelected();
             a = aboutTab.isSelected();
-            s = setApiKeyTab.isSelected();
+            // s = setApiKeyTab.isSelected();
             m = moreTab.isSelected();
             backupQuery = query;
         }
@@ -139,8 +141,8 @@ public class DashboardActivity extends BaseActivity
                 pronunciationsTab.setSelected(true);
             } else if(a) {
                 aboutTab.setSelected(true);
-            } else if(s) {
-                setApiKeyTab.setSelected(true);
+            //} else if(s) {
+            //    setApiKeyTab.setSelected(true);
             } else if(m) {
                 moreTab.setSelected(true);
             } else {
@@ -199,9 +201,9 @@ public class DashboardActivity extends BaseActivity
                     }
                 });
                 content.addView(pronunciationListView);
-            } else if(setApiKeyTab.isSelected()) {
-                onSetApiKeyTabClick();
-            }
+            }// else if(setApiKeyTab.isSelected()) {
+             //   onSetApiKeyTabClick();
+            //}
         }
     }
 
@@ -245,7 +247,7 @@ public class DashboardActivity extends BaseActivity
             pronunciationsTab = (SidebarItemView) findViewById(
                     R.id.pronunciations_tab);
             aboutTab = (SidebarItemView) findViewById(R.id.about_tab);
-            setApiKeyTab = (SidebarItemView) findViewById(R.id.set_api_key_tab);
+            // setApiKeyTab = (SidebarItemView) findViewById(R.id.set_api_key_tab);
             moreTab = (SidebarItemView) findViewById(R.id.more_tab);
             wordsTab.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -273,14 +275,14 @@ public class DashboardActivity extends BaseActivity
                     DashboardActivity.this.onAboutTabClick();
                 }
             });
-            setApiKeyTab.setOnClickListener(new View.OnClickListener() {
+            /*setApiKeyTab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     unselectAllSidebarItems();
                     ((SidebarItemView) view).setSelected(true);
                     DashboardActivity.this.onSetApiKeyTabClick();
                 }
-            });
+            });*/
             moreTab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -319,14 +321,14 @@ public class DashboardActivity extends BaseActivity
                     Uri.parse("market://details?id=ru.o2genum.howtosay")));
                 }
             });
-            adapter.addAction(new Action(R.drawable.ic_key,
+            /*adapter.addAction(new Action(R.drawable.ic_key,
                         getString(R.string.dashboard_api_key)) {
                 @Override
                 public void performAction() {
                     DashboardActivity.this.startActivity(new Intent(
                             DashboardActivity.this, SetApiKeyActivity.class));
                 }
-            });
+            });*/
             gridView.setAdapter(adapter);
             gridView.setOnItemClickListener(new OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View view,
@@ -342,7 +344,7 @@ public class DashboardActivity extends BaseActivity
         wordsTab.setSelected(false);
         pronunciationsTab.setSelected(false);
         aboutTab.setSelected(false);
-        setApiKeyTab.setSelected(false);
+        //setApiKeyTab.setSelected(false);
         moreTab.setSelected(false);
     }
 
