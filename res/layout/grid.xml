@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
     android:id="@+id/dashboard_layout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
+<RelativeLayout android:layout_width="fill_parent"
+    android:id="@+id/home_layout"
+    android:layout_height="wrap_content">
 <GridView 
     android:id="@+id/grid"
+    android:layout_weight="1"
     android:layout_width="fill_parent" 
     android:layout_height="fill_parent"
     android:layout_alignParentTop="true"
@@ -14,14 +19,27 @@
     android:horizontalSpacing="5dp"
     android:stretchMode="columnWidth"
     android:gravity="center"/>
-<TextView
+    <TextView
     android:id="@+id/text_view"
+    android:gravity="right"
     android:autoLink="all"
-    android:text=""
-    android:gravity="right|top"
     android:layout_weight="0"
     android:layout_alignParentBottom="true"
-    android:layout_height="20dp"
-    android:layout_marginTop="-20dp"
+    android:layout_height="wrap_content"
     android:layout_width="fill_parent"/>
+</RelativeLayout>
+<LinearLayout android:layout_width="fill_parent"
+    android:id="@+id/ad_layout"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:layout_alignParentBottom="true"
+    android:layout_alignBottom="@+id/home_layout">
+<com.google.ads.AdView android:id="@+id/ad"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    ads:adUnitId="a150dd56496fdb6"
+    ads:adSize="BANNER"
+    ads:loadAdOnCreate="true"
+    android:layout_width="fill_parent"/>
+</LinearLayout>
 </RelativeLayout>

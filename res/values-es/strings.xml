@@ -1,70 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- For translators: you should translate phrases enclosed in <string> tags.
-     Please, read about strings in Android:
-     http://developer.android.com/guide/topics/resources/string-resource.html
-     Don't forget to specify the language below.
-     Translating comments is not necessary. -->
-<!-- Language: English -->
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
-    <string name="app_name">How to Say</string>
-    <string name="error_exception">Error! There are problems with internet connection or the servers.</string>
-    <string name="set_api_key_toast">Click \"API key\" to set your API key!</string>
-    <string name="api_key_explanation">Forvo allows third-party apps (and this app, in particular) to access its resources. But only 1000 requests per day are permitted for all users of each app. Therefore, this application may not work sometimes because other users may exceed the limits. So I recommend you to <b>register your own free API key at http://api.forvo.com and enter it below</b>. Good luck: the key is damn long!</string>
-    <!-- Pronunciation search activity -->
-    <string name="pronunciations_of">Pronunciations of \"%s\"</string>
-    <string name="male">male</string>
-    <string name="female">female</string>
-    <!-- Dashboard -->
-    <string name="select_theme_title">Select theme</string>
-    <string name="share_app_text">A cool pronunciation guide! How to Say @ Android Market</string>
-    <string name="share_app_subject">How to Say @ Android Market</string>
-    <string name="restart_app_message">Please, restart the app to apply the theme</string>
-    <string name="forvo_attribution">Powered by <a href='http://forvo.com'>Forvo.com</a></string>
-    <!-- Dashboard icons -->
-    <string name="words">Words</string>
-    <string name="pronunciations">Pronunciations</string>
-    <string name="forvo_com">Forvo.com</string>
-    <string name="about_rate">About / rate app</string>
-    <string name="more">More...</string>
-    <!-- Menu -->
-    <string name="change_theme">Change theme</string>
-    <string name="share_the_app">Share</string>
-    <string name="help_translate">Thanslate this app</string>
-    <!-- Word search activity -->
-    <string name="searching_for">Searching for \"%s\"</string>
-    <!-- Looks like that cool plurals localization mechanism is broken. I worked with Russian and plurals behaved very strangely. I recommend you only to set "one" and "other" values. Try something like "pronunciations: %d" (try to create a phrase that suitable for every number). Example two: in Russian I used abbreviation: "%d произн." - the ending of the word changes depending on value of %d, but I just cut it out. -->
-    <plurals name="pronunciation_s">
-        <item quantity="one">1 pronunciation</item>
-        <item quantity="other">%d pronunciations</item>
-    </plurals>
-    <string name="start_screen_pronunciations">pronunciations</string>
-    <string name="start_screen_words">words</string>
-    <string name="search_for_pronunciations">Search for pronunciations</string>
-    <!-- Set API key activity -->
-    <string name="set_button">Set</string>
-    <string name="key_is_set">API key is set</string>
-    <string name="key_is_not_set">API key is not set</string>
-    <string name="key_seems_wrong">API key seems wrong</string>
-    <!-- Others -->
-    <string name="how_to_say_intent">How to say?</string>
-    <string name="search_hint">Search words</string>
-    <string name="settings_description">Search for words and their pronunciations</string>
-    <!-- Congratulations! The app also needs translations of names of countries and languages! Untranslated languages and countries will be present in English in the app.
+  <string name="app_name">Cómo Decir</string>
+  <string name="error_exception">Error! Revise la conexión al internet.</string>
+  <string name="set_api_key_toast">Haz clic en \"API key\" para definir su clave de API!</string>
+  <string name="api_key_explanation">Forvo permite que aplicaciones de terceros (y esta aplicación, en particular) acceden a sus recursos. Pero sólo 1000 solicitudes por día se les permite a todos los usuarios de cada aplicación. Por eso, esta aplicación puede no funcionar a veces porque otros usuarios pueden exceder los límites. Así que te recomendamos <b>registrar tu propia clave gratis en http://api.forvo.com e introducirlo abajo</b>. Buena suerte: la clave es larga!</string>
+  <!--Pronunciation search activity-->
+  <string name="pronunciations_of">Pronunciación es de \"%s\"</string>
+  <string name="male">masculino</string>
+  <string name="female">femenino</string>
+  <!--Dashboard-->
+  <string name="select_theme_title">Seleccionar tema</string>
+  <string name="share_app_text">Una guía de pronunciación. Cómo Decir @ Google Play</string>
+  <string name="share_app_subject">Cómo Decir @ Google Play</string>
+  <string name="restart_app_message">Por favor, reinicie la aplicación para aplicar el tema</string>
+  <string name="forvo_attribution"></string>
+  <!--Dashboard icons-->
+  <string name="words">Palabras</string>
+  <string name="pronunciations">Pronunciacion</string>
+  <string name="forvo_com">Forvo.com</string>
+  <string name="about_rate">Sobre / calificar este app</string>
+  <string name="dashboard_api_key">clave de API</string>
+  <string name="more">Más...</string>
+  <!--Menu-->
+  <string name="change_theme">Cambiar el tema</string>
+  <string name="share_the_app">Compartir</string>
+  <string name="help_translate">Traduzca este app</string>
+  <!--Word search activity-->
+  <string name="searching_for">Buscando por \"%s\"</string>
+  <!--Looks like that cool plurals localization mechanism is broken. I worked with Russian and plurals behaved very strangely. I recommend you only to set "one" and "other" values. Try something like "pronunciations: %d" (try to create a phrase that suitable for every number). Example two: in Russian I used abbreviation: "%d произн." - the ending of the word changes depending on value of %d, but I just cut it out.-->
+  <plurals name="pronunciation_s">
+    <item quantity="one">1 pronunciación</item>
+    <item quantity="other">%d pronunciaciones</item>
+  </plurals>
+  <string name="start_screen_pronunciations">pronunciaciones</string>
+  <string name="start_screen_words">palabras</string>
+  <string name="search_for_pronunciations">Buscar pronunciaciones</string>
+  <!--Set API key activity-->
+  <string name="set_button">Definir</string>
+  <string name="key_is_set">La clave de API esta definida</string>
+  <string name="key_is_not_set">La clave de API no esta definida</string>
+  <string name="key_seems_wrong">La clave de API aparece incorrecta</string>
+  <!--Others-->
+  <string name="how_to_say_intent">¿Cómo decir?</string>
+  <string name="search_hint">Buscar palabras</string>
+  <string name="settings_description">Buscar palabras y sus pronunciaciones</string>
+  <!--Congratulations! The app also needs translations of names of countries and languages! Untranslated languages and countries will be present in English in the app.
          Useful links:
          http://www.listofcountriesoftheworld.com/
          http://www.forvo.com/languages-codes/
          http://<language-code>.forvo.com/languages/<language-code>
          For example,
          http://ru.forvo.com/languages/ngh to get Russian name for N|uu
-         language  -->
-    <!-- Countries -->
-    <!-- Example:
+         language-->
+  <!--Countries-->
+  <!--Example:
          <string name="russia">Россия</string>
          <string name="united_states">Соединённые Штаты</string>
-         As you see, name attributes are just names of countries in lower case with "_" instead of spaces, hyphens and apostrophes and without brackets and commas. -->
-    <!-- Uncomment following lines with names of countries and provide translations. If you don't want to translate something, comment the line. There should be no empty strings! -->
-    <!--
-    <string name="afghanistan"></string>
+         As you see, name attributes are just names of countries in lower case with "_" instead of spaces, hyphens and apostrophes and without brackets and commas.-->
+  <!--Uncomment following lines with names of countries and provide translations. If you don't want to translate something, comment the line. There should be no empty strings!-->
+  <!--<string name="afghanistan"></string>
     <string name="akrotiri"></string>
     <string name="albania"></string>
     <string name="algeria"></string>
@@ -385,16 +379,14 @@
     <string name="micronesia_federated_states_of"></string>
     <string name="micronesia_states_of"></string>
     <string name="bahamas_the"></string>
-    <string name="svalbard_and_jan_mayen"></string>
-    -->
-    <!-- Stand up and look out the window. -->
-    <!-- Languages -->
-    <!-- Don't know translation? Comment the untranslated line.
+    <string name="svalbard_and_jan_mayen"></string>-->
+  <!--Stand up and look out the window.-->
+  <!--Languages-->
+  <!--Don't know translation? Comment the untranslated line.
          Don't leave active translations empty!
          Due to Java naming rules "x-tp" code is "xtp",
          and "new" code is "new_".-->
-    <!--
-    <string name="mfo"></string>
+  <!--<string name="mfo"></string>
     <string name="nxq"></string>
     <string name="ab"></string>
     <string name="ady"></string>
@@ -674,10 +666,9 @@
     <string name="esu"></string>
     <string name="zza"></string>
     <string name="za"></string>
-    <string name="zu"></string>
-    -->
-    <!-- Chagelog -->
-    <string name="changelog_full_title">Change Log</string>
-    <string name="changelog_title">What\'s New</string>
-    <string name="changelog_ok_button">OK</string>
+    <string name="zu"></string>-->
+  <!--Chagelog-->
+  <string name="changelog_full_title">Registro de cambios</string>
+  <string name="changelog_title">Lo nuevo</string>
+  <string name="changelog_ok_button">OK</string>
 </resources>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--See strings.xml for guidelines-->
+  <string-array name="theme_names">
+    <item>Arándano negro</item>
+    <item>Arándano blanco</item>
+  </string-array>
+  <string-array name="more_menu">
+    <item>Cambiar tema</item>
+    <item>Compartir</item>
+    <item>Traduzca este app</item>
+  </string-array>
+</resources>

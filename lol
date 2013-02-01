@@ -2,16 +2,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:layout_height="fill_parent">
     <ru.o2genum.howtosay.StartScreenView
-        android:id="@+id/start_screen_view"
         android:layout_centerInParent="true"
+        android:id="@+id/start_screen_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <com.google.ads.AdView android:id="@+id/ad"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"
         android:gravity="center"
         android:layout_height="wrap_content"
         ads:adUnitId="a150dd56496fdb6"

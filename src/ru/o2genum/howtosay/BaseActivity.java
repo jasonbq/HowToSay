@@ -128,7 +128,7 @@ public abstract class BaseActivity extends Activity {
                 }
             });
         }
-        }
+    }
 
     public void setView(View view) {
         FrameLayout frame = (FrameLayout) findViewById(R.id.frame);

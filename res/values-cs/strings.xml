@@ -2,7 +2,7 @@
 <resources>
   <!--<string name="app_name">Jak říct</string>-->
   <string name="app_name">How to Say</string>
-  <string name="error_exception">Chyba! Prověřte připojení k internetu, obdržte osobní klíč API a ujistěte se, že je platný a není prošlý.</string>
+  <string name="error_exception">Chyba! Prověřte připojení k internetu.</string>
   <string name="set_api_key_toast">Klepněte na \"Klíč API\" pro nastavení vašeho klíče API!</string>
   <string name="api_key_explanation">Forvo umožňuje aplikacím třetích stran (a zvláště tomuto programu) přistupovat ke svým zdrojům. Ale všem uživatelům každé aplikace je dovoleno pouze 1000 žádostí za den. Z toho důvodu program někdy nemusí pracovat, protože byla tato hranice již překročena. Takže vám doporučuji zaregistrování <b>vašeho vlastního klíče API zdarma na http://api.forvo.com a zadejte jej níže</b>. Hodně štěstí: klíč je zatraceně dlouhý!</string>
   <string name="pronunciations_of">Vyslovování \"%s\"</string>

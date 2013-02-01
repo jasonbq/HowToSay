@@ -54,15 +54,6 @@
                     o2genum:icon="@drawable/ic_about"
                     o2genum:text="@string/about_rate"/>
                 <ru.o2genum.howtosay.SidebarItemView
-                    android:id="@+id/set_api_key_tab"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:paddingLeft="8dp"
-                    android:layout_marginBottom="8dp"
-                    o2genum:icon="@drawable/ic_key"
-                    o2genum:text="@string/dashboard_api_key"/>
-                <ru.o2genum.howtosay.SidebarItemView
                     android:id="@+id/more_tab"
                     android:orientation="vertical"
                     android:layout_width="wrap_content"

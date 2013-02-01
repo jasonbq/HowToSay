@@ -2,7 +2,6 @@
 Esta aplicação é um Guia de Pronunciação. Introduza uma palavra ー e ouça a sua pronunciação! Esta aplicação utiliza os recurso do Forvo.com e funciona como o seu cliente não-oficial.
 
 * Esta aplicação é totalmente gratuita
-* Esta aplicação não possui anúncios
 * Esta aplicação é open-source (Apache 2.0 License)
 * Todas as pronunciações são fornecidas por falantes nativos
 * Esta aplicação está traduzida em Inglês, Russo, Português, Turko e Tcheco

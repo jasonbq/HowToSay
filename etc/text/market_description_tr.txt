@@ -2,7 +2,6 @@
 Bu yazılım bir telafuz yardımcısıdır. Kelimeyi girin ー ve telafuzunu dinleyin! Yazılımımız Forvo.com'un kaynaklarını kullanmaktadır ve onun resmi olmayan istemcisi olarak çalışmaktadır.
 
 * Tamamen ücretsizdir
-* Reklamsızdır
 * Açık kaynaklıdır (Apache 2.0 Lisansı)
 * Bütün telafuzlar anadili konuşanlar tarafından sağlanır
 * Yazılım İngilizce, Rusçaya, Portekize, Türk, Çek desteklemektedir.

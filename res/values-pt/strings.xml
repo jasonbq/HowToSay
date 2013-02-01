@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--<string name="app_name">Como se Pronuncia</string>-->
-  <string name="error_exception">Erro! Verifique a sua ligação à internet, obtenha uma API key pessoal e certifique-se que é válida.</string>
+  <string name="error_exception">Erro! Verifique a sua ligação à internet.</string>
   <string name="set_api_key_toast">Selecione \"API key\" para definir a sua API key.</string>
   <string name="api_key_explanation">Forvo permite que aplicações externas (incluindo esta) acedam aos seus recursos. Mas apenas são permitidos 1000 pedidos por dia para todos os utilizadores de cada aplicação. Desta forma, esta aplicação poderá, por vezes, não funcionar pois outros utilizares poderão exceder este limite. Assim eu recomendo que <b>registem a vossa API key gratuita em http://api.forvo.com e coloquem-na em baixo</b>. Boa sorte!</string>
   <string name="pronunciations_of">Pronunciações de \"%s\"</string>

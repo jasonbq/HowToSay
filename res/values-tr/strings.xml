@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--<string name="app_name">Nasıl söylenir</string>-->
-  <string name="error_exception">Hata! İnternet bağlantınızı kontrol edin, kişisel API anahtarı edinin ve anahtarınızın geçerli ve süresinin dolmamış olduğundan emin olun.</string>
+  <string name="error_exception">Hata! İnternet bağlantınızı kontrol edin.</string>
   <string name="set_api_key_toast">API anahtarınızı ayarlamak için \"API anahtarı\"na tıklayın!</string>
   <string name="api_key_explanation">Forvo 3. kişi yazılımların (ve bu yazılımın) kaynaklarına erişmesine izin verir. Yalnız her yazılım bütün kullanıcılarının toplamda günlük 1000 talep hakkı vardır. Bundan ötürü bu yazılım diğer kullanıcılar günlük limiti aşmış olabileceğinden bazen çalışmayabilir. Yani size <b>kendi ücretsiz API anahtarınızı http://api.forvo.com da kayıt ettirip aşağıya girmenizi</b> tavsiye ediyorum. İyi şanslar: anahtar epeyce uzun!</string>
   <string name="pronunciations_of">\"%s\" kelimesinin telafuzları</string>
