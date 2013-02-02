@@ -1,10 +1,10 @@
 -- Description --
-This is a pronunciation guide. Enter a word ー and listen to its pronunciation! The application uses resources of Forvo.com and actually works as its unofficial client.
+This is a pronunciation guide (talking dictionary). Enter a word ー and listen to its pronunciation! The application uses resources of Forvo.com and actually works as its unofficial client.
 
 * The app is absolutely free
 * The app is open-source (Apache 2.0 License)
 * All pronunciations are provided by native speakers
-* The app is translated into English, Russian, Turkish, Portuguese and Czech
+* The app is translated into English, Russian, Turkish, Portuguese, Czech, Spanish and French
 * Adaptated for Android 3.0+ tablets
 
 The project is here: https://github.com/o2genum/HowToSay
