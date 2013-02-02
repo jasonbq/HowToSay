@@ -1,49 +1,48 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <string name="app_name">How to Say</string>
-  <string name="error_exception">Error! Revise la conexión al internet.</string>
-  <string name="set_api_key_toast">Haz clic en \"API key\" para definir su clave de API!</string>
-  <string name="api_key_explanation">Forvo permite que aplicaciones de terceros (y esta aplicación, en particular) acceden a sus recursos. Pero sólo 1000 solicitudes por día se les permite a todos los usuarios de cada aplicación. Por eso, esta aplicación puede no funcionar a veces porque otros usuarios pueden exceder los límites. Así que te recomendamos <b>registrar tu propia clave gratis en http://api.forvo.com e introducirlo abajo</b>. Buena suerte: la clave es larga!</string>
+  <string name="error_exception">Erreur! Vérifier la connexion internet.</string>
+  <string name="set_api_key_toast">Appuyez sur \"Clé API\" pour définir votre clé API !</string>
+  <string name="api_key_explanation">THIS IS UNNEEDED</string>
   <!--Pronunciation search activity-->
-  <string name="pronunciations_of">Pronunciación es de \"%s\"</string>
-  <string name="male">masculino</string>
-  <string name="female">femenino</string>
+  <string name="pronunciations_of">Prononciations de \"%s\"</string>
+  <string name="male">homme</string>
+  <string name="female">femme</string>
   <!--Dashboard-->
-  <string name="select_theme_title">Seleccionar tema</string>
-  <string name="share_app_text">Una guía de pronunciación. Cómo Decir @ Google Play</string>
-  <string name="share_app_subject">Cómo Decir @ Google Play</string>
-  <string name="restart_app_message">Por favor, reinicie la aplicación para aplicar el tema</string>
+  <string name="select_theme_title">Sélectionner un thème</string>
+  <string name="share_app_text">Un guide de prononciation. How to Say @ Google Play</string>
+  <string name="share_app_subject">How to Say @ Google Play</string>
+  <string name="restart_app_message">S\'il vous plaît, redémarrez l\'application pour appliquer le thème</string>
   <string name="forvo_attribution"></string>
   <!--Dashboard icons-->
-  <string name="words">Palabras</string>
-  <string name="pronunciations">Pronunciacion</string>
+  <string name="words">Mots</string>
+  <string name="pronunciations">Prononciations</string>
   <string name="forvo_com">Forvo.com</string>
-  <string name="about_rate">Sobre / calificar este app</string>
-  <string name="dashboard_api_key">clave de API</string>
-  <string name="more">Más...</string>
+  <string name="about_rate">À propos / noter l\'appication</string>
+  <string name="more">Plus...</string>
   <!--Menu-->
-  <string name="change_theme">Cambiar el tema</string>
-  <string name="share_the_app">Compartir</string>
-  <string name="help_translate">Traduzca este app</string>
+  <string name="change_theme">Changer de thème</string>
+  <string name="share_the_app">Partager</string>
+  <string name="help_translate">Traduire cette application</string>
   <!--Word search activity-->
-  <string name="searching_for">Buscando por \"%s\"</string>
+  <string name="searching_for">Recherche pour \"%s\"</string>
   <!--Looks like that cool plurals localization mechanism is broken. I worked with Russian and plurals behaved very strangely. I recommend you only to set "one" and "other" values. Try something like "pronunciations: %d" (try to create a phrase that suitable for every number). Example two: in Russian I used abbreviation: "%d произн." - the ending of the word changes depending on value of %d, but I just cut it out.-->
   <plurals name="pronunciation_s">
-    <item quantity="one">1 pronunciación</item>
-    <item quantity="other">%d pronunciaciones</item>
+    <item quantity="one">1 prononciation</item>
+    <item quantity="other">%d prononciations</item>
   </plurals>
-  <string name="start_screen_pronunciations">pronunciaciones</string>
-  <string name="start_screen_words">palabras</string>
-  <string name="search_for_pronunciations">Buscar pronunciaciones</string>
+  <string name="start_screen_pronunciations">prononciations</string>
+  <string name="start_screen_words">mots</string>
+  <string name="search_for_pronunciations">Rechercher des prononciations</string>
   <!--Set API key activity-->
-  <string name="set_button">Definir</string>
-  <string name="key_is_set">La clave de API esta definida</string>
-  <string name="key_is_not_set">La clave de API no esta definida</string>
-  <string name="key_seems_wrong">La clave de API aparece incorrecta</string>
+  <string name="set_button">Définir</string>
+  <string name="key_is_set">Clé API définie</string>
+  <string name="key_is_not_set">Clé API non définie</string>
+  <string name="key_seems_wrong">Clé API incorrecte</string>
   <!--Others-->
-  <string name="how_to_say_intent">¿Cómo decir?</string>
-  <string name="search_hint">Buscar palabras</string>
-  <string name="settings_description">Buscar palabras y sus pronunciaciones</string>
+  <string name="how_to_say_intent">Comment dire?</string>
+  <string name="search_hint">Rechercher des mots</string>
+  <string name="settings_description">Rechercher des mots et leurs prononciations</string>
   <!--Congratulations! The app also needs translations of names of countries and languages! Untranslated languages and countries will be present in English in the app.
          Useful links:
          http://www.listofcountriesoftheworld.com/
@@ -668,7 +667,7 @@
     <string name="za"></string>
     <string name="zu"></string>-->
   <!--Chagelog-->
-  <string name="changelog_full_title">Registro de cambios</string>
-  <string name="changelog_title">Lo nuevo</string>
+  <string name="changelog_full_title">Change Log</string>
+  <string name="changelog_title">Nouveautés</string>
   <string name="changelog_ok_button">OK</string>
 </resources>

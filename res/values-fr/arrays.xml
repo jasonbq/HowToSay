@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--See strings.xml for guidelines-->
+  <string-array name="theme_names">
+    <item>Myrtille noir</item>
+    <item>Myrtille blanc</item>
+  </string-array>
+  <string-array name="more_menu">
+    <item>Changer de thème</item>
+    <item>Partager</item>
+    <item>Traduire l\'application</item>
+  </string-array>
+</resources>

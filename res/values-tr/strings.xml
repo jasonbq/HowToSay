@@ -8,8 +8,8 @@
   <string name="male">bay</string>
   <string name="female">bayan</string>
   <string name="select_theme_title">Tema seç</string>
-  <string name="share_app_text">Harika bir telafuz yardımcısı! How to Say Android Markette</string>
-  <string name="share_app_subject">How to Say Android Markette</string>
+  <string name="share_app_text">Harika bir telafuz yardımcısı! How to Say @ Google Play</string>
+  <string name="share_app_subject">How to Say @ Google Play</string>
   <string name="restart_app_message">Lütfen yeni temayı uygulamak için uygulamayı yeniden başlatın</string>
   <string name="forvo_attribution"><a href='http://forvo.com'>Forvo.com</a> temelli</string>
   <string name="words">Kelimeler</string>

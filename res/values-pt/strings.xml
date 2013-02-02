@@ -8,8 +8,8 @@
   <string name="male">masculino</string>
   <string name="female">feminino</string>
   <string name="select_theme_title">Escolha o tema</string>
-  <string name="share_app_text">Um guia de Pronunciação! How to Say @ Android Market</string>
-  <string name="share_app_subject">How to Say @ Android Market</string>
+  <string name="share_app_text">Um guia de Pronunciação! How to Say @ Google Play</string>
+  <string name="share_app_subject">How to Say @ Google Play</string>
   <string name="restart_app_message">Por favor, reinicie a aplicação para aplicar o tema.</string>
   <string name="forvo_attribution">Powered by <a href='http://forvo.com'>Forvo.com</a></string>
   <string name="words">Palavras</string>

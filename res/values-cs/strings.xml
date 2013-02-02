@@ -9,8 +9,8 @@
   <string name="male">muž</string>
   <string name="female">žena</string>
   <string name="select_theme_title">Vybrat motiv</string>
-  <string name="share_app_text">Skvělý průvodce pro výslovnost! How to Say @ Android Market</string>
-  <string name="share_app_subject">How to Say @ Android Market</string>
+  <string name="share_app_text">Skvělý průvodce pro výslovnost! How to Say @ Google Play</string>
+  <string name="share_app_subject">How to Say @ Google Play</string>
   <string name="restart_app_message">Spusťte, prosím, aplikaci znovu pro použití motivu</string>
   <string name="forvo_attribution">Napájeno <a href='http://forvo.com'>Forvo.com</a></string>
   <string name="words">Slova</string>

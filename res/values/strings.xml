@@ -16,8 +16,8 @@
     <string name="female">female</string>
     <!-- Dashboard -->
     <string name="select_theme_title">Select theme</string>
-    <string name="share_app_text">A cool pronunciation guide! How to Say @ Android Market</string>
-    <string name="share_app_subject">How to Say @ Android Market</string>
+    <string name="share_app_text">A cool pronunciation guide! How to Say @ Google Play</string>
+    <string name="share_app_subject">How to Say @ Google Play</string>
     <string name="restart_app_message">Please, restart the app to apply the theme</string>
     <string name="forvo_attribution">Powered by <a href='http://forvo.com'>Forvo.com</a></string>
     <!-- Dashboard icons -->

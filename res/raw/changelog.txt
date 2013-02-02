@@ -19,6 +19,11 @@
     </style>
   </head>
   <body>
+$ 2.1.8
+ % Version 2.1.8
+ _ 2.02.2013
+ * French translation (by Vincent Ordioni)
+
 $ 2.1.7
  % Version 2.1.7
  _ 1.02.2013
