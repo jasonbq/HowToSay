@@ -81,6 +81,7 @@ public abstract class BaseActivity extends Activity {
         mediaPlayer = new MediaPlayer();
         // Set API key
         ApiKey.setKey(getApiKey());
+        ApiKey.setHost("apipremium.forvo.com");
         initializeBasicUI();
     }
 
