@@ -4,13 +4,13 @@ For users
 ---------
 This is a pronunciation guide application for Android based on [Forvo](http://forvo.com). The app provides word search and pronunciations for every word. Available in [Android Market](https://market.android.com/details?id=ru.o2genum.howtosay) (search "How to Say" or "pname:ru.o2genum.howtosay").
 <p align="center">
-<img src="/o2genum/HowToSay/raw/master/etc/png/screenshot-1.png" width="18%"/>&nbsp;
-<img src="/o2genum/HowToSay/raw/master/etc/png/screenshot-2.png" width="18%"/>&nbsp;
-<img src="/o2genum/HowToSay/raw/master/etc/png/screenshot-3.png" width="18%"/>&nbsp;
-<img src="/o2genum/HowToSay/raw/master/etc/png/screenshot-4.png" width="18%"/>&nbsp;
-<img src="/o2genum/HowToSay/raw/master/etc/png/screenshot-5.png" width="18%"/>
+<img src="https://raw.github.com/o2genum/HowToSay/master/etc/png/screenshot-1.png" width="18%"/>&nbsp;
+<img src="https://raw.github.com/o2genum/HowToSay/master/etc/png/screenshot-2.png" width="18%"/>&nbsp;
+<img src="https://raw.github.com/o2genum/HowToSay/master/etc/png/screenshot-3.png" width="18%"/>&nbsp;
+<img src="https://raw.github.com/o2genum/HowToSay/master/etc/png/screenshot-4.png" width="18%"/>&nbsp;
+<img src="https://raw.github.com/o2genum/HowToSay/master/etc/png/screenshot-5.png" width="18%"/>
 <br>
-<img src="/o2genum/HowToSay/raw/master/etc/png/screenshot-6.png" width="94%"/>
+<img src="https://raw.github.com/o2genum/HowToSay/master/etc/png/screenshot-6.png" width="94%"/>
 </p>
 
 For developers
